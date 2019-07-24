@@ -1,0 +1,18 @@
+PODS:
+  - DnpTool (1.0.0):
+    - DnpTool/Metrics (= 1.0.0)
+  - DnpTool/Metrics (1.0.0)
+
+DEPENDENCIES:
+  - DnpTool (from `../`)
+
+EXTERNAL SOURCES:
+  DnpTool:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  DnpTool: fd16c3a52f0e095cae0c213af51c631d2b36f631
+
+PODFILE CHECKSUM: 8eefc7a38b3895fa1d9a889811868a206833bb92
+
+COCOAPODS: 1.7.4
