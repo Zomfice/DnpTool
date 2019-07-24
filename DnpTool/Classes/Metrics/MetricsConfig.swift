@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 
+/// 给项目中的UIView类添加红色的元素线
 public class MetricsConfig: NSObject {
     public static let shared = MetricsConfig()
     public var borderColor = UIColor.red
