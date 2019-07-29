@@ -20,7 +20,31 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i18-ZZ-HIB">
+                                <rect key="frame" x="127.5" y="303.5" width="120" height="60"/>
+                                <color key="backgroundColor" red="0.4810732875" green="1" blue="0.8934181712" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="3bL-TH-fJN"/>
+                                    <constraint firstAttribute="height" constant="60" id="d41-5m-Kvx"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N32-IN-Dsc">
+                                <rect key="frame" x="76" y="62" width="223" height="100"/>
+                                <color key="backgroundColor" red="1" green="0.27450980390000002" blue="0.062745098040000002" alpha="0.59032534246575341" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="A2i-kl-5wU"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="i18-ZZ-HIB" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="8uL-fP-wTj"/>
+                            <constraint firstItem="N32-IN-Dsc" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="60" id="BXU-Rd-bqK"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="N32-IN-Dsc" secondAttribute="trailing" constant="60" id="LTk-XE-V6C"/>
+                            <constraint firstItem="i18-ZZ-HIB" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" id="VQv-BJ-Fqn"/>
+                            <constraint firstItem="N32-IN-Dsc" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="42" id="owY-e0-9yb"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>

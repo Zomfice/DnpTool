@@ -14,7 +14,15 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        MetricsConfig.shared.setEnable(true)
+        
+    }
+    
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        DnpCheckManager.shareInstance.show()
+    }
+    
+    func metrics() {
+        MetricsConfig.shared.setEnable(false)
         
         MetricsConfig.shared.borderColor = UIColor.magenta
         
@@ -24,10 +32,6 @@ class ViewController: UIViewController {
         if let cls = swiftClassFromString_system(className: name),let clname = cls as? UIVisualEffectView.Type {
             //print("----\(clname.self)")
             print("----\(effect.isKind(of: clname))")
-        }
-        /// OC中isKindOfClass
-        if self.view.isKind(of: UIView.self){
-            
         }
     }
 

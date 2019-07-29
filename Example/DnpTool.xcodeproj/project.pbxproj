@@ -45,7 +45,7 @@
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		68F4F5E95674CB45FA334F0C /* Pods-DnpTool_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DnpTool_Tests.debug.xcconfig"; path = "Target Support Files/Pods-DnpTool_Tests/Pods-DnpTool_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		BBB508075E3E0F518CF78789 /* Pods_DnpTool_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DnpTool_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C4922DF8419A1890B746EEA1 /* DnpTool.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = DnpTool.podspec; path = ../DnpTool.podspec; sourceTree = "<group>"; };
+		C4922DF8419A1890B746EEA1 /* DnpTool.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = DnpTool.podspec; path = ../DnpTool.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		E03FDEB1929FC4B05719A75B /* Pods-DnpTool_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DnpTool_Example.release.xcconfig"; path = "Target Support Files/Pods-DnpTool_Example/Pods-DnpTool_Example.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 

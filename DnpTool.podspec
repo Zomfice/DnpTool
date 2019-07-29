@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'DnpTool'
-  s.version          = '1.0.1'
+  s.version          = '1.0.2'
   s.summary          = 'A short description of DnpTool.'
 
   s.description      = <<-DESC
@@ -19,12 +19,20 @@ TODO: Add long description of the pod here.
 
   #s.source_files = 'DnpTool/Classes/**/*'
   
-  # s.resource_bundles = {
-  #   'DnpTool' => ['DnpTool/Assets/*.png']
-  # }
-
+    s.resource_bundles = {
+        'DnpTool' => ['DnpTool/Assets/*']
+    }
+    s.subspec 'Common' do |spec|
+      spec.source_files = 'DnpTool/Classes/Common/**/*'
+    end
+    
+    s.subspec 'Check' do |spec|
+        spec.source_files = 'DnpTool/Classes/Check/**/*'
+        spec.dependency 'DnpTool/Common'
+    end
+  
     s.subspec 'Metrics' do |spec|
-    spec.source_files = 'DnpTool/Classes/Metrics/**/*'
+        spec.source_files = 'DnpTool/Classes/Metrics/**/*'
     end
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
