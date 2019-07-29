@@ -16,7 +16,7 @@ class DnpVisualWindow: UIWindow {
         self.layer.cornerRadius = screenScale(x: 8)
         self.layer.borderWidth = 1
         self.layer.borderColor = UIColor.dnp_colorWithHex(hex: 0x999999, alpha: 0.2).cgColor
-        self.windowLevel = UIWindowLevelAlert
+        self.windowLevel = UIWindow.Level.alert
         let pan = UIPanGestureRecognizer(target: self, action: #selector(pan(sender:)))
         self.addGestureRecognizer(pan)
     }

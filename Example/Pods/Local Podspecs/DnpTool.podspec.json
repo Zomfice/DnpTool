@@ -1,6 +1,6 @@
 {
   "name": "DnpTool",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "summary": "A short description of DnpTool.",
   "description": "TODO: Add long description of the pod here.",
   "homepage": "https://github.com/Zomfice/DnpTool",
@@ -13,11 +13,12 @@
   },
   "source": {
     "git": "https://github.com/Zomfice/DnpTool.git",
-    "tag": "1.0.1"
+    "tag": "1.0.3"
   },
   "platforms": {
     "ios": "8.0"
   },
+  "swift_versions": "4.2",
   "resource_bundles": {
     "DnpTool": [
       "DnpTool/Assets/*"
@@ -41,5 +42,6 @@
       "name": "Metrics",
       "source_files": "DnpTool/Classes/Metrics/**/*"
     }
-  ]
+  ],
+  "swift_version": "4.2"
 }
