@@ -113,7 +113,20 @@ extension Int{
     }
 }
 
-
+extension NSString{
+    func calculateSize(limitSize: CGSize,font: UIFont,lineSpace: CGFloat) -> CGSize {
+        var attributes = [NSAttributedString.Key: Any]()
+        if lineSpace > 0{
+            let style = NSMutableParagraphStyle()
+            style.lineSpacing = lineSpace
+            attributes = [NSMutableAttributedString.Key.paragraphStyle : style,
+                          NSMutableAttributedString.Key.font : font]
+        }else{
+            attributes = [NSMutableAttributedString.Key.font : font]
+        }
+        return self.boundingRect(with: limitSize, options: .usesLineFragmentOrigin, attributes: attributes, context: nil).size
+    }
+}
 
 public let ShowNotification = "ShowPluginNotification"
 public let CloseNotification = "ClosePluginNotification"

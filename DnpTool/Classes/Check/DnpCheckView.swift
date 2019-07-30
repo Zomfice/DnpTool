@@ -36,13 +36,20 @@ class DnpCheckView: UIView {
         viewBound.layer.borderColor = UIColor.dnp_colorWithHex(hex: 0xCC3A4B, alpha: 1).cgColor
         viewBound.layer.zPosition = CGFloat.greatestFiniteMagnitude
         
-        viewInfoWindow = DnpVisualWindow(frame: CGRect(x: screenScale(x: 30), y: screenheight - screenScale(x: 210) - screenScale(x: 30), width: screenwidth - 2*screenScale(x: 30), height: screenScale(x: 210)))
+        viewInfoWindow = DnpVisualWindow(frame: CGRect(x: screenScale(x: 30), y: screenheight - screenScale(x: 210) - screenScale(x: 15) - bottomSafeArea, width: screenwidth - 2*screenScale(x: 30), height: screenScale(x: 210)))
         
         viewInfoWindow.makeKeyAndVisible()
         viewInfoWindow.isHidden = true
+        viewInfoWindow.backgroundColor = UIColor.white.withAlphaComponent(0.4)
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
             self.window?.makeKeyAndVisible()
         }
+        
+        viewInfoLabel = UILabel(frame: CGRect(x: screenScale(x: 10), y: screenScale(x: 10), width: viewInfoWindow.bounds.size.width - 2*screenScale(x: 10) , height: viewInfoWindow.bounds.size.height - 2*screenScale(x: 10)))
+        viewInfoLabel.numberOfLines = 0
+        viewInfoLabel.textColor = UIColor.white
+        viewInfoLabel.font = UIFont.systemFont(ofSize: screenScale(x: 24))
+        viewInfoWindow.addSubview(viewInfoLabel)
         
         let closeWidth = screenScale(x: 44)
         let closeHeight = screenScale(x: 44)
@@ -50,20 +57,12 @@ class DnpCheckView: UIView {
         closeBtn.setBackgroundImage(UIImage.imageName(name: "doraemon_close"), for: .normal)
         closeBtn.addTarget(self, action: #selector(closeBtnClicked(sender:)), for: .touchUpInside)
         viewInfoWindow.addSubview(closeBtn)
-        
-        viewInfoLabel = UILabel(frame: CGRect(x: screenScale(x: 32), y: screenScale(x: 10), width: viewInfoWindow.bounds.size.width - 2*screenScale(x: 32) - closeBtn.bounds.size.width, height: viewInfoWindow.bounds.size.height - 2*screenScale(x: 10)))
-        viewInfoLabel.numberOfLines = 0
-        viewInfoLabel.backgroundColor = UIColor.clear
-        viewInfoLabel.textColor = UIColor.rgb(red: 51, green: 51, blue: 51)
-        viewInfoLabel.font = UIFont.systemFont(ofSize: screenScale(x: 24))
-        viewInfoWindow.addSubview(viewInfoLabel)
-        
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         let touch = touches.first
         let point = touch?.location(in: self)
-        
+
         left = point?.x ?? 0
         top = point?.y ?? 0
         let topPoint = touch?.location(in: self.window)
@@ -71,6 +70,7 @@ class DnpCheckView: UIView {
             viewBound.frame = frame
             self.window?.addSubview(viewBound)
             viewInfoLabel.attributedText = viewInfo(view: view)
+            labelHeight(text: viewInfoLabel.attributedText?.string)
         }
     }
     
@@ -84,6 +84,8 @@ class DnpCheckView: UIView {
         let frame = self.window?.convert(view?.bounds ?? .zero, from: view) ?? .zero
         viewBound.frame = frame
         viewInfoLabel.attributedText = self.viewInfo(view: view)
+        
+        labelHeight(text: viewInfoLabel.attributedText?.string)
     }
     
     override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -149,13 +151,30 @@ class DnpCheckView: UIView {
         let style = NSMutableParagraphStyle()
         style.lineSpacing = screenScale(x: 12)
         style.lineBreakMode = .byTruncatingTail
-        
+        let fontColor = UIColor.rgb(red: 250, green: 75, blue: 75, alpha: 1)
         let attrString = NSMutableAttributedString(string: string)
         attrString.addAttributes([NSMutableAttributedString.Key.paragraphStyle : style,
                                   NSMutableAttributedString.Key.font : UIFont.systemFont(ofSize: screenScale(x: 24)),
-                                  NSMutableAttributedString.Key.foregroundColor : UIColor.rgb(red: 51, green: 51, blue: 51)
+                                  NSMutableAttributedString.Key.foregroundColor : fontColor
                                  ], range: NSRange(location: 0, length: string.count))
         return attrString
+    }
+    
+    func labelHeight(text: String?) {
+        guard let str = text else {
+            return
+        }
+        let string = str as NSString
+        let size = string.calculateSize(limitSize: CGSize(width: viewInfoWindow.bounds.size.width - 2*screenScale(x: 40), height: CGFloat(MAXFLOAT)), font: UIFont.systemFont(ofSize: screenScale(x: 24)), lineSpace: screenScale(x: 12))
+        
+        var infoLabelFrame = viewInfoLabel.frame
+        infoLabelFrame.size.height = size.height
+        viewInfoLabel.frame = infoLabelFrame
+        
+        var infoWindowFrame = viewInfoWindow.frame
+        infoWindowFrame.size.height = size.height + screenScale(x: 20)
+        viewInfoWindow.frame = infoWindowFrame
+
     }
     
     func hexFromUIColor(color: UIColor?) -> String {
