@@ -18,7 +18,8 @@ class ViewController: UIViewController {
     }
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        DnpCheckManager.shareInstance.show()
+        //DnpCheckManager.shareInstance.show()
+        DnpToolManager.shareInstance.show()
     }
     
     func metrics() {

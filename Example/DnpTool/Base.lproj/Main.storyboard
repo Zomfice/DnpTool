@@ -29,7 +29,7 @@
                                     <constraint firstAttribute="height" constant="60" id="d41-5m-Kvx"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N32-IN-Dsc">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N32-IN-Dsc" customClass="MyView">
                                 <rect key="frame" x="76" y="62" width="223" height="100"/>
                                 <color key="backgroundColor" red="1" green="0.27450980390000002" blue="0.062745098040000002" alpha="0.59032534246575341" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <constraints>

@@ -41,6 +41,7 @@ internal var iphoneX: Bool{
     return iphonex
 }
 
+// MARK: 16进制颜色RGB
 extension UIColor{
     static func dnp_colorWithHex(hex: Int32,alpha: CGFloat)-> UIColor {
         return UIColor(red: CGFloat(((hex >> 16) & 0xFF))/255.0, green: CGFloat(((hex >> 8) & 0xFF))/255.0, blue: CGFloat((hex & 0xFF))/255.0, alpha: alpha)
@@ -55,7 +56,7 @@ class DnpToolCommon {
 }
 
 
-/// 当前资源Bundle
+// MARK: 当前资源Bundle
 internal class DnpBundle {
     static func getBundlePath(resource name: String,ofType type: String) -> String? {
         var bundle = Bundle(for: DnpToolCommon.self)
@@ -66,7 +67,7 @@ internal class DnpBundle {
     }
 }
 
-/// Bundle中图片
+// MARK: Bundle中图片
 extension UIImage {
     static func imageName(name: String) -> UIImage? {
         var imageName = name
@@ -87,6 +88,7 @@ extension UIImage {
     }
 }
 
+// MARK: 当前类名
 extension NSObject{
     var classname: String{
         get{
@@ -100,19 +102,21 @@ extension NSObject{
     }
 }
 
-
+// MARK: 几位小数
 extension CGFloat {
     func format(f: String = ".1") -> String {
         return String(format: "%\(f)f", self)
     }
 }
 
+// MARK: 16进制
 extension Int{
     func hex(f: String = "%02X") -> String {
         return String(format: "\(f)", self)
     }
 }
 
+// MARK: 字体估算高度
 extension NSString{
     func calculateSize(limitSize: CGSize,font: UIFont,lineSpace: CGFloat) -> CGSize {
         var attributes = [NSAttributedString.Key: Any]()

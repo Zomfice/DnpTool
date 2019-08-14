@@ -26,6 +26,10 @@ TODO: Add long description of the pod here.
       spec.source_files = 'DnpTool/Classes/Common/**/*'
     end
     
+    s.subspec 'Home' do |spec|
+        spec.source_files = 'DnpTool/Classes/Home/**/*'
+    end
+    
     s.subspec 'Check' do |spec|
         spec.source_files = 'DnpTool/Classes/Check/**/*'
         spec.dependency 'DnpTool/Common'

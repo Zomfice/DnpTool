@@ -134,7 +134,7 @@ class DnpCheckView: UIView {
         var tempString = "控件名称:" + "\(m_view.classname)"
         showString.append(tempString)
         
-        tempString = "\n控件位置: " + "左\(m_view.frame.origin.x.format())" + "上\(m_view.frame.origin.y.format())" + "宽\(m_view.frame.size.width.format())" + "高\(m_view.frame.size.height.format())"
+        tempString = "\n控件位置: " + "x:\(m_view.frame.origin.x.format())" + " y:\(m_view.frame.origin.y.format())" + " w:\(m_view.frame.size.width.format())" + " h:\(m_view.frame.size.height.format())"
         showString.append(tempString)
         
         if m_view.isKind(of: UILabel.self){
@@ -142,7 +142,7 @@ class DnpCheckView: UIView {
                 tempString = "\n背景颜色: \(hexFromUIColor(color: label.backgroundColor))" + "字体颜色: \(hexFromUIColor(color: label.textColor))" + "字体大小: \(label.font.pointSize.format())"
                 showString.append(tempString)
             }
-        }else if m_view.isMember(of: UIView.self){
+        }else if m_view.isKind(of: UIView.self){
             tempString = "\n背景颜色: \(hexFromUIColor(color: m_view.backgroundColor))" + "\(rgbFromUIColor(color: m_view.backgroundColor))"
             showString.append(tempString)
         }
