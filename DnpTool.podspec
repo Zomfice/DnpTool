@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'DnpTool'
-  s.version          = '1.0.9'
+  s.version          = '1.1.0'
   s.summary          = 'A short description of DnpTool.'
 
   s.description      = <<-DESC
@@ -40,6 +40,7 @@ TODO: Add long description of the pod here.
   
     s.subspec 'Metrics' do |spec|
         spec.source_files = 'DnpTool/Classes/Metrics/**/*'
+        spec.dependency 'DnpTool/Common'
     end
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
