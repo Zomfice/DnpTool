@@ -27,7 +27,7 @@ class DnpCheckView: UIView {
         self.backgroundColor = UIColor.clear
         self.layer.zPosition = CGFloat.greatestFiniteMagnitude
         let imageView = UIImageView(frame: self.bounds)
-        imageView.image = UIImage.imageName(name: "doraemon_visual")
+        imageView.image = UIImage.imageName(name: "dnptool_visual")
         self.addSubview(imageView)
         
         viewBound = UIView()
@@ -54,7 +54,7 @@ class DnpCheckView: UIView {
         let closeWidth = screenScale(x: 44)
         let closeHeight = screenScale(x: 44)
         closeBtn = UIButton(frame: CGRect(x: viewInfoWindow.bounds.size.width - closeWidth - screenScale(x: 32), y: screenScale(x: 18), width: closeWidth, height: closeHeight))
-        closeBtn.setBackgroundImage(UIImage.imageName(name: "doraemon_close"), for: .normal)
+        closeBtn.setBackgroundImage(UIImage.imageName(name: "dnptool_close"), for: .normal)
         closeBtn.addTarget(self, action: #selector(closeBtnClicked(sender:)), for: .touchUpInside)
         viewInfoWindow.addSubview(closeBtn)
     }

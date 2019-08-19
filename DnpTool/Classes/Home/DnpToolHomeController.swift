@@ -33,10 +33,10 @@ class DnpToolHomeController: DnpToolBaseController {
         [
             "head":"工具",
             "data":[
-                ["title": "Log","icon":"dnptool_img","jump":"TestController"],
-                ["title": "元素","icon":"dnptool_img","jump":"TestController"],
-                ["title": "控件","icon":"dnptool_img","jump":"TestController"],
-                ["title": "标尺","icon":"dnptool_img","jump":"TestController"]
+                ["title": "Log","icon":"dnptool_img","jump":""],
+                ["title": "元素","icon":"dnptool_img","jump":"DnpMetricsController"],
+                ["title": "控件","icon":"dnptool_img","jump":"DnpCheckController"],
+                ["title": "标尺","icon":"dnptool_img","jump":""]
             ]
         ],
         [
@@ -67,8 +67,7 @@ class DnpToolHomeController: DnpToolBaseController {
     func jumpto(indexPath: IndexPath) {
         let homeModel = self.homeData[indexPath.section][indexPath.item]
         if homeModel.type == 1{
-            //self.close()
-            DnpCheckManager.shareInstance.show()
+            self.close()
             return
         }
         if homeModel.jump.count > 0,let clsName = Bundle(for: DnpToolCommon.self).infoDictionary!["CFBundleExecutable"] as? String{

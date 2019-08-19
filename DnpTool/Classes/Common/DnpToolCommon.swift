@@ -138,7 +138,7 @@ protocol ReuseViewProtocol: NSObjectProtocol {
 }
 
 extension UIView: ReuseViewProtocol {
-    public static var reuseIdentifier: String {
+    static var reuseIdentifier: String {
         return "\(self)"
     }
 }

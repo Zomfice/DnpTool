@@ -7,54 +7,46 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		008EACE9FB7FFEC92D7D64A5DCDFCFBE /* DnpShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5648DF2FBB5291E8D788805F081045 /* DnpShadowView.swift */; };
+		06A4FD94D8F8321F26B6167959B2F8AB /* dnptool_enter@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 192C52E72EC1D0101858F2B17D960D09 /* dnptool_enter@3x.png */; };
+		0E47F3714F6B3ED8EAD7F5D5818EEE88 /* DnpToolHomeWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30275E654F11E02EDE97121E29CBA568 /* DnpToolHomeWindow.swift */; };
 		16055D144D9CEB61DCEB53DC40AAE76F /* Pods-DnpTool_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DEDB131F9F79AC9418D48A9154A9964F /* Pods-DnpTool_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		16A77016ED0B64985CDC0C9CA018791D /* DnpTool-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 22C4E75B62702435A29C38EDD0930937 /* DnpTool-dummy.m */; };
-		1FFD102A8E5D644A7017E758C92B65C7 /* DnpToolBaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4902EC1AB6D396AB405F17B09FA75E07 /* DnpToolBaseController.swift */; };
-		2006868586BE54D6C734081AD73F9201 /* DnpToolEnterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB94363BD654BD63332D7230222D80F /* DnpToolEnterView.swift */; };
-		229482CB20BFFBBCD78CECF284F6170A /* doraemon_logo@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = AF86570A43666A96874ACEB49BFD141F /* doraemon_logo@3x.png */; };
-		279600F2DC9EF4FB58FDBA1CD3A98C25 /* dnptool_img@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = E53CE3ED3FF90C69D344911F67535BE2 /* dnptool_img@3x.png */; };
-		3FEC42F068962B11259C33F6D8CF0B0B /* LoadProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342705181500A4125F37432FA79AAB8F /* LoadProtocol.swift */; };
-		4613A649158877B3417696977EE076B4 /* MetricsConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = D461F7440330637606967448E6E46745 /* MetricsConfig.swift */; };
-		4C326AF6E2BA77FED93D58969BAB4722 /* DnpCheckManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDC7D391CB5EFE4AECC827CE91571DC /* DnpCheckManager.swift */; };
-		4E03BD53D9A38ACCB20543BB1F4A02D0 /* doraemon_close@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C500CD9CA9A8EE1F76DACDC4C289849D /* doraemon_close@2x.png */; };
-		52372FE0EDC1870CB419B562AEE1CB6D /* DnpToolStatusBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED3C1E933623EFD79114F556FBE935EB /* DnpToolStatusBarController.swift */; };
-		54D4F9E0562E7D86189874219AC6A4E9 /* NSObject+Swizzle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34443A472CB8C38DD90500AB1E310D01 /* NSObject+Swizzle.swift */; };
-		56C0A8C087EFAFFC0A6E8F7286AAF469 /* DnpToolCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F92B67915CFF72A60F75A9DF31D385 /* DnpToolCommon.swift */; };
+		1EF347B97BF82B5E3160CE92CF6E5083 /* MetricsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8772CD1E8507EA340491508D4796C2FF /* MetricsView.swift */; };
+		2D534833AD584B2AD9467300E7B07006 /* DnpToolManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1665444570DD4AF54365D05A654031D /* DnpToolManager.swift */; };
+		4373EBC7198E659233363DECFC72B7E1 /* dnptool_visual@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1AED730534F553BFBBB242D361ECD9FC /* dnptool_visual@2x.png */; };
+		4B8E75BA359E0167C2994C46BD4CEDF4 /* DnpToolCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = F755B1139F53F32D35066614F29BE1B5 /* DnpToolCommon.swift */; };
+		4F349FA94D7AAE220DD5EE0C51064C2C /* DnpToolStatusBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7246E3BB61007E91795169599913C8B1 /* DnpToolStatusBarController.swift */; };
+		56CBA8EA1812C9711BDE5B05B49A6CBE /* DnpToolSwitchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28FF874FC26E2635F6EEB6589DCBC89B /* DnpToolSwitchController.swift */; };
 		5A44DE9B3C8C46C35DBEC538F37DADBB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		6776687F9F7E99FE1ED55D85F487D461 /* doraemon_visual@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6DCBD1910E435B532D3CBA4709179F7D /* doraemon_visual@2x.png */; };
-		73CEE5370C135A7435147DC1D8CD442B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		62BBF5E045B5077BF6C90DBDF17E0D3F /* DnpVisualWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 583C74EBECA7010BEF68162805F8DBAC /* DnpVisualWindow.swift */; };
+		69778EC075771D24A347C6F19CCDEBBC /* DnpToolBaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E2BF1DACF9B93F612EE2EC04C2DB22 /* DnpToolBaseController.swift */; };
+		697D884E4FFA6BB621C6785DF4919D99 /* dnptool_img@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A702F45A33FA9EFE91D5D5CD13EE7C9F /* dnptool_img@2x.png */; };
+		7724B4CDA9EC78C5596511E885CCC408 /* DnpCheckController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58CD55448EA9F4AC36231FC9D042D2A1 /* DnpCheckController.swift */; };
 		7947C1AE4EE92B9E0182BCAC7795ECF7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		940BBD1DE70088B079836B313FB16BC3 /* DnpCheckView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B88A14AAB45569B47075C2A6CCC71187 /* DnpCheckView.swift */; };
-		9991C3E3EF7D830F03E23A60D24A8B60 /* dnptool_enter@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C732271A8C19FE80019BB74ED0942E4B /* dnptool_enter@2x.png */; };
-		9A6B4722D80E094B1E69003C2359224A /* DnpToolHomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CC7E58071FC313CE9BB94537076A36 /* DnpToolHomeController.swift */; };
-		9AFBD47A297F415C3818BACB05256BEE /* doraemon_logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4213BE550EE1C80C1B4E4A0EE855FA74 /* doraemon_logo@2x.png */; };
-		A0225974C5EC4FE6E45C7845B0699D4F /* DnpToolManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367A2C7C9D5EEA546C99CD8DFED565CA /* DnpToolManager.swift */; };
-		A47F031EF75003F9A43BB81951A9FF9C /* doraemon_close@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A0CE10D79951EFFAEF66DCC6E94F253 /* doraemon_close@3x.png */; };
-		A5D62B4112A46B4C2499E970EAD8295B /* TestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71FF1F042ACA3BB27DDADEEE2D8114F2 /* TestController.swift */; };
+		7BBC168BD638BE123FC3F0D0555C4B02 /* UIView+Metrics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C2ECA92030B31E0372E94A9F2D04AA /* UIView+Metrics.swift */; };
+		834B6AF9AF73FAE397B040A5FFE6E43E /* dnptool_close@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B8D53BD39A53DEF273F77E1851872BE /* dnptool_close@2x.png */; };
+		915A0A1751A53669B06B53A9A970C329 /* DnpToolHomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A157EFE8C4F64C84BE4817BB357FAAD6 /* DnpToolHomeController.swift */; };
+		9DC8E5C5AA73FDD3EB9266107F53CCE7 /* DnpShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8156AC05A22B881C92ECF6933ADC90 /* DnpShadowView.swift */; };
+		A48B13DC64106DEA020179B7861C69A5 /* DnpToolEnterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2E1D42E642487D36B15A16B79B46E6 /* DnpToolEnterView.swift */; };
 		A6AEEFB88F1A7298B33A2A619140EE2D /* Pods-DnpTool_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 05BAB023068344123A2A3C54FA428502 /* Pods-DnpTool_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AEB466A4DB3C7E0D8FA4DC363159BE74 /* DnpTool-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 79EE7F9AAC0E03F553D27B52301FADE9 /* DnpTool-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B518C5B112A7A69BD640151C06D88FCD /* DnpVisualWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F09A0C1D3EF62C1BBC51B0FDD6B3BCD /* DnpVisualWindow.swift */; };
-		B7FCDDE2DA4BEBE2F8F075404DE29909 /* DnpToolHomeWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F8E74BE779F0564959CFA5A4EE287D /* DnpToolHomeWindow.swift */; };
+		A7869FC012F8DCE0D1FF2F15A741745C /* DnpTool.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C2AD5A9FD07189D94FF9915C3B1A9D8A /* DnpTool.bundle */; };
+		A9AF5CD94B16319735C2F5042D822CCA /* MetricsConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8113D1FA7BF3003FF31F44AEDF53A896 /* MetricsConfig.swift */; };
+		AF0F52ED0DB818133EC91A296276E80B /* dnptool_visual@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 261D8C3FF92A15C91493A88F1D5F2D5E /* dnptool_visual@3x.png */; };
+		BAB71E2E2FA8E2D5D298CAECB6EF0EF6 /* DnpCheckView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A0FB92F0AA8777DEE479BC52AC3A7E /* DnpCheckView.swift */; };
+		C32F66E48F28338B0604B485A368D635 /* dnptool_close@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = FC1855FA3E465FE317CEA80A52E13276 /* dnptool_close@3x.png */; };
 		C5E3366132DDB620A71C9DF0C4A86C7D /* Pods-DnpTool_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B276942201FC2C3D91CC994FCDF2A013 /* Pods-DnpTool_Tests-dummy.m */; };
-		CFBC8CFEBE1C6A5D967E7AA8A65AA5FB /* DnpTool.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C2AD5A9FD07189D94FF9915C3B1A9D8A /* DnpTool.bundle */; };
-		D73A3BD73B99FEA339F6D8DCE2B25B48 /* UIView+Metrics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E17228D9C6D867060ECB0F743D88AE0 /* UIView+Metrics.swift */; };
-		D8E71B367505AE8A8D623BFC82ABA935 /* doraemon_visual@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 78A6A40334B0629DACF318AA474BADA1 /* doraemon_visual@3x.png */; };
-		EB184C1A2F8251136D97DF398866074F /* dnptool_img@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C16262863550377FEB0D20EA9DE4247 /* dnptool_img@2x.png */; };
-		EF5ACACA230A8E20002930D6 /* DnpCheckController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5ACAC9230A8E20002930D6 /* DnpCheckController.swift */; };
-		F5CDEEF8581CA42FB1635935BD0BA98E /* dnptool_enter@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = A5A56AB1D464CBFA8911048EC2A9998E /* dnptool_enter@3x.png */; };
+		C71E738EE2DE88F303C1256E1B0B9A0F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		D1DA0D14E8D4626ECE629902DA5AA238 /* dnptool_img@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F92563F8727248EB2006A5673A473044 /* dnptool_img@3x.png */; };
+		D37E33AFB28974DE18805CB8EF0CD624 /* DnpMetricsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455326DBC8A7B3280AD2E3E67D5BF6E0 /* DnpMetricsController.swift */; };
+		DE1A74ECDD0F8EBF60121B3C07EC494C /* NSObject+Swizzle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742E5D171D65A58799C34A1938C2C2B0 /* NSObject+Swizzle.swift */; };
+		E2973BB383F5033A7EADF6C6683E90F2 /* dnptool_enter@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 70ECF69E8BCD42AB64F94D6742749093 /* dnptool_enter@2x.png */; };
+		EA1AEFB71E3B875C89B0DDFCF48EA201 /* DnpTool-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AEEAA66FF0AF4B022463BF6FFE2E890B /* DnpTool-dummy.m */; };
+		EB9ACED7255B287CBEE97BB15FC1B652 /* DnpCheckManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB2C0FDB21D8881BD38B8956A863F4C /* DnpCheckManager.swift */; };
+		F06BEB1FB56897214E43ED9B4646E279 /* DnpTool-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 377A5BE8821A62106264B1A5674C0C07 /* DnpTool-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F422E940ED1589B8365F67E80AD1B9D5 /* LoadProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BFB8F8E0FB14F0B5276562713162AAD /* LoadProtocol.swift */; };
 		F88AC2DE56E1200FE6F27603FEB3C1DE /* Pods-DnpTool_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 43958BAC52D0B36B4523809F9D92EE7B /* Pods-DnpTool_Example-dummy.m */; };
-		FD537145D5A0D0F6553F1E3CDEECE143 /* MetricsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855C09AFF30B9ED8C5F3F6E7B1B5E542 /* MetricsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		48C329CFF2B6AD926FECA150001A0B50 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = DE39B899CC52DEE3CDD080A75B801531;
-			remoteInfo = "DnpTool-DnpTool";
-		};
 		8F294EB61E87A8D220A981EF6AA46C3B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
@@ -69,74 +61,80 @@
 			remoteGlobalIDString = 2207020FFF7E3169E3AF227FADECFE53;
 			remoteInfo = DnpTool;
 		};
+		EC386151E558D4FEBB752A0605665EBA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DE39B899CC52DEE3CDD080A75B801531;
+			remoteInfo = "DnpTool-DnpTool";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0209FAA4D735BF2DEB063EAE747F40F2 /* DnpTool.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DnpTool.xcconfig; sourceTree = "<group>"; };
 		036126D2C73353B6E6258C2E83265785 /* Pods-DnpTool_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DnpTool_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		05BAB023068344123A2A3C54FA428502 /* Pods-DnpTool_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-DnpTool_Tests-umbrella.h"; sourceTree = "<group>"; };
-		0604176BA7F625816218D22DC3A4F951 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		192C52E72EC1D0101858F2B17D960D09 /* dnptool_enter@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "dnptool_enter@3x.png"; path = "DnpTool/Assets/dnptool_enter@3x.png"; sourceTree = "<group>"; };
+		1AED730534F553BFBBB242D361ECD9FC /* dnptool_visual@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "dnptool_visual@2x.png"; path = "DnpTool/Assets/dnptool_visual@2x.png"; sourceTree = "<group>"; };
 		1CD8FBB389C1C17AECC13ADC41420B1A /* Pods-DnpTool_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DnpTool_Example.release.xcconfig"; sourceTree = "<group>"; };
-		1EDC7D391CB5EFE4AECC827CE91571DC /* DnpCheckManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DnpCheckManager.swift; path = DnpTool/Classes/Check/DnpCheckManager.swift; sourceTree = "<group>"; };
-		22C4E75B62702435A29C38EDD0930937 /* DnpTool-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DnpTool-dummy.m"; sourceTree = "<group>"; };
-		2A0CE10D79951EFFAEF66DCC6E94F253 /* doraemon_close@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "doraemon_close@3x.png"; path = "DnpTool/Assets/doraemon_close@3x.png"; sourceTree = "<group>"; };
-		2E42D48E562BE8E381C32F7A31C8F98D /* DnpTool.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = DnpTool.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		2FB3286AB7DD62C44B739DDCEC470F09 /* DnpTool-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DnpTool-prefix.pch"; sourceTree = "<group>"; };
+		261D8C3FF92A15C91493A88F1D5F2D5E /* dnptool_visual@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "dnptool_visual@3x.png"; path = "DnpTool/Assets/dnptool_visual@3x.png"; sourceTree = "<group>"; };
+		28FF874FC26E2635F6EEB6589DCBC89B /* DnpToolSwitchController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DnpToolSwitchController.swift; path = DnpTool/Classes/Common/DnpToolSwitchController.swift; sourceTree = "<group>"; };
+		2B1B99CA376D85B776F246318B0B7379 /* DnpTool-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "DnpTool-Info.plist"; sourceTree = "<group>"; };
+		30275E654F11E02EDE97121E29CBA568 /* DnpToolHomeWindow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DnpToolHomeWindow.swift; path = DnpTool/Classes/Home/DnpToolHomeWindow.swift; sourceTree = "<group>"; };
 		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		342705181500A4125F37432FA79AAB8F /* LoadProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LoadProtocol.swift; path = DnpTool/Classes/Metrics/LoadProtocol.swift; sourceTree = "<group>"; };
-		34443A472CB8C38DD90500AB1E310D01 /* NSObject+Swizzle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSObject+Swizzle.swift"; path = "DnpTool/Classes/Metrics/NSObject+Swizzle.swift"; sourceTree = "<group>"; };
-		367A2C7C9D5EEA546C99CD8DFED565CA /* DnpToolManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DnpToolManager.swift; path = DnpTool/Classes/Home/DnpToolManager.swift; sourceTree = "<group>"; };
-		3C16262863550377FEB0D20EA9DE4247 /* dnptool_img@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "dnptool_img@2x.png"; path = "DnpTool/Assets/dnptool_img@2x.png"; sourceTree = "<group>"; };
-		4213BE550EE1C80C1B4E4A0EE855FA74 /* doraemon_logo@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "doraemon_logo@2x.png"; path = "DnpTool/Assets/doraemon_logo@2x.png"; sourceTree = "<group>"; };
+		377A5BE8821A62106264B1A5674C0C07 /* DnpTool-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DnpTool-umbrella.h"; sourceTree = "<group>"; };
 		43958BAC52D0B36B4523809F9D92EE7B /* Pods-DnpTool_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-DnpTool_Example-dummy.m"; sourceTree = "<group>"; };
-		43F92B67915CFF72A60F75A9DF31D385 /* DnpToolCommon.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DnpToolCommon.swift; path = DnpTool/Classes/Common/DnpToolCommon.swift; sourceTree = "<group>"; };
-		4776D647851A4585CBA87934814E91BC /* Pods_DnpTool_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DnpTool_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4902EC1AB6D396AB405F17B09FA75E07 /* DnpToolBaseController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DnpToolBaseController.swift; path = DnpTool/Classes/Common/DnpToolBaseController.swift; sourceTree = "<group>"; };
-		4E123A57A22862C8E5FDAB113585FC5C /* Pods_DnpTool_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DnpTool_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4F16BB869D26D03A82EA2250F774569A /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		455326DBC8A7B3280AD2E3E67D5BF6E0 /* DnpMetricsController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DnpMetricsController.swift; path = DnpTool/Classes/Home/DnpMetricsController.swift; sourceTree = "<group>"; };
+		4776D647851A4585CBA87934814E91BC /* Pods_DnpTool_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_DnpTool_Example.framework; path = "Pods-DnpTool_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4E123A57A22862C8E5FDAB113585FC5C /* Pods_DnpTool_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_DnpTool_Tests.framework; path = "Pods-DnpTool_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		510A87C51B0A9A6F02D11D11EF542A2D /* DnpTool-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DnpTool-prefix.pch"; sourceTree = "<group>"; };
+		52E2BF1DACF9B93F612EE2EC04C2DB22 /* DnpToolBaseController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DnpToolBaseController.swift; path = DnpTool/Classes/Common/DnpToolBaseController.swift; sourceTree = "<group>"; };
+		583C74EBECA7010BEF68162805F8DBAC /* DnpVisualWindow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DnpVisualWindow.swift; path = DnpTool/Classes/Common/DnpVisualWindow.swift; sourceTree = "<group>"; };
+		58CD55448EA9F4AC36231FC9D042D2A1 /* DnpCheckController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DnpCheckController.swift; path = DnpTool/Classes/Home/DnpCheckController.swift; sourceTree = "<group>"; };
 		5997F84AE9348C65E22337E8699D1E57 /* Pods-DnpTool_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-DnpTool_Example-Info.plist"; sourceTree = "<group>"; };
-		5E17228D9C6D867060ECB0F743D88AE0 /* UIView+Metrics.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+Metrics.swift"; path = "DnpTool/Classes/Metrics/UIView+Metrics.swift"; sourceTree = "<group>"; };
+		5B8156AC05A22B881C92ECF6933ADC90 /* DnpShadowView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DnpShadowView.swift; path = DnpTool/Classes/Common/DnpShadowView.swift; sourceTree = "<group>"; };
 		5EFCA5D6126CA9E9CE890FFF6272D918 /* Pods-DnpTool_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-DnpTool_Tests.modulemap"; sourceTree = "<group>"; };
 		6A98363C5C3D9636D1A21E2A46DEB453 /* Pods-DnpTool_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-DnpTool_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		6DCBD1910E435B532D3CBA4709179F7D /* doraemon_visual@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "doraemon_visual@2x.png"; path = "DnpTool/Assets/doraemon_visual@2x.png"; sourceTree = "<group>"; };
-		71FF1F042ACA3BB27DDADEEE2D8114F2 /* TestController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TestController.swift; path = DnpTool/Classes/Home/TestController.swift; sourceTree = "<group>"; };
-		7658B247CB66F72E49DC19539480106D /* DnpTool.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DnpTool.xcconfig; sourceTree = "<group>"; };
-		772660CBE55A8B69E49E149783C22A52 /* DnpTool.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DnpTool.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		78A6A40334B0629DACF318AA474BADA1 /* doraemon_visual@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "doraemon_visual@3x.png"; path = "DnpTool/Assets/doraemon_visual@3x.png"; sourceTree = "<group>"; };
-		79EE7F9AAC0E03F553D27B52301FADE9 /* DnpTool-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DnpTool-umbrella.h"; sourceTree = "<group>"; };
-		7A5648DF2FBB5291E8D788805F081045 /* DnpShadowView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DnpShadowView.swift; path = DnpTool/Classes/Common/DnpShadowView.swift; sourceTree = "<group>"; };
-		855C09AFF30B9ED8C5F3F6E7B1B5E542 /* MetricsView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MetricsView.swift; path = DnpTool/Classes/Metrics/MetricsView.swift; sourceTree = "<group>"; };
+		6B2E1D42E642487D36B15A16B79B46E6 /* DnpToolEnterView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DnpToolEnterView.swift; path = DnpTool/Classes/Home/DnpToolEnterView.swift; sourceTree = "<group>"; };
+		6B8D53BD39A53DEF273F77E1851872BE /* dnptool_close@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "dnptool_close@2x.png"; path = "DnpTool/Assets/dnptool_close@2x.png"; sourceTree = "<group>"; };
+		70ECF69E8BCD42AB64F94D6742749093 /* dnptool_enter@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "dnptool_enter@2x.png"; path = "DnpTool/Assets/dnptool_enter@2x.png"; sourceTree = "<group>"; };
+		7246E3BB61007E91795169599913C8B1 /* DnpToolStatusBarController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DnpToolStatusBarController.swift; path = DnpTool/Classes/Home/DnpToolStatusBarController.swift; sourceTree = "<group>"; };
+		742E5D171D65A58799C34A1938C2C2B0 /* NSObject+Swizzle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSObject+Swizzle.swift"; path = "DnpTool/Classes/Metrics/NSObject+Swizzle.swift"; sourceTree = "<group>"; };
+		772660CBE55A8B69E49E149783C22A52 /* DnpTool.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = DnpTool.framework; path = DnpTool.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		78CBB26F12D5F18BE2F7887368C4A51C /* DnpTool.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = DnpTool.modulemap; sourceTree = "<group>"; };
+		7BFB8F8E0FB14F0B5276562713162AAD /* LoadProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LoadProtocol.swift; path = DnpTool/Classes/Metrics/LoadProtocol.swift; sourceTree = "<group>"; };
+		8113D1FA7BF3003FF31F44AEDF53A896 /* MetricsConfig.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MetricsConfig.swift; path = DnpTool/Classes/Metrics/MetricsConfig.swift; sourceTree = "<group>"; };
+		85C2ECA92030B31E0372E94A9F2D04AA /* UIView+Metrics.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+Metrics.swift"; path = "DnpTool/Classes/Metrics/UIView+Metrics.swift"; sourceTree = "<group>"; };
 		8653C7EB8B4E8183D889FCFE85C1753E /* Pods-DnpTool_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DnpTool_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		8772CD1E8507EA340491508D4796C2FF /* MetricsView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MetricsView.swift; path = DnpTool/Classes/Metrics/MetricsView.swift; sourceTree = "<group>"; };
 		88B9BBC122999854EF4B77EC44F1993A /* Pods-DnpTool_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DnpTool_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		88CC7E58071FC313CE9BB94537076A36 /* DnpToolHomeController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DnpToolHomeController.swift; path = DnpTool/Classes/Home/DnpToolHomeController.swift; sourceTree = "<group>"; };
-		8F09A0C1D3EF62C1BBC51B0FDD6B3BCD /* DnpVisualWindow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DnpVisualWindow.swift; path = DnpTool/Classes/Common/DnpVisualWindow.swift; sourceTree = "<group>"; };
 		9547C7EBC3606333C890874468808C2B /* Pods-DnpTool_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-DnpTool_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		956A3E2AD2C79427C94DE6666D648A1E /* ResourceBundle-DnpTool-DnpTool-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-DnpTool-DnpTool-Info.plist"; sourceTree = "<group>"; };
+		973329C92E41444BCEAF7C75C023F3BA /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		9A99175AE18F399C91D5DC1F186170EA /* Pods-DnpTool_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-DnpTool_Example-frameworks.sh"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9FB94363BD654BD63332D7230222D80F /* DnpToolEnterView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DnpToolEnterView.swift; path = DnpTool/Classes/Home/DnpToolEnterView.swift; sourceTree = "<group>"; };
-		A5A56AB1D464CBFA8911048EC2A9998E /* dnptool_enter@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "dnptool_enter@3x.png"; path = "DnpTool/Assets/dnptool_enter@3x.png"; sourceTree = "<group>"; };
+		9C18505D416676854D4C6089BF139370 /* DnpTool.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = DnpTool.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A157EFE8C4F64C84BE4817BB357FAAD6 /* DnpToolHomeController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DnpToolHomeController.swift; path = DnpTool/Classes/Home/DnpToolHomeController.swift; sourceTree = "<group>"; };
+		A702F45A33FA9EFE91D5D5CD13EE7C9F /* dnptool_img@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "dnptool_img@2x.png"; path = "DnpTool/Assets/dnptool_img@2x.png"; sourceTree = "<group>"; };
 		AE870A64FF4B94CCD578B3E2669BB1EC /* Pods-DnpTool_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-DnpTool_Example.modulemap"; sourceTree = "<group>"; };
-		AF86570A43666A96874ACEB49BFD141F /* doraemon_logo@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "doraemon_logo@3x.png"; path = "DnpTool/Assets/doraemon_logo@3x.png"; sourceTree = "<group>"; };
+		AEEAA66FF0AF4B022463BF6FFE2E890B /* DnpTool-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DnpTool-dummy.m"; sourceTree = "<group>"; };
+		B1665444570DD4AF54365D05A654031D /* DnpToolManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DnpToolManager.swift; path = DnpTool/Classes/Home/DnpToolManager.swift; sourceTree = "<group>"; };
 		B276942201FC2C3D91CC994FCDF2A013 /* Pods-DnpTool_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-DnpTool_Tests-dummy.m"; sourceTree = "<group>"; };
-		B2CF4DB5F3011244D4880589263C9BFF /* DnpTool-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "DnpTool-Info.plist"; sourceTree = "<group>"; };
-		B88A14AAB45569B47075C2A6CCC71187 /* DnpCheckView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DnpCheckView.swift; path = DnpTool/Classes/Check/DnpCheckView.swift; sourceTree = "<group>"; };
-		C1F8E74BE779F0564959CFA5A4EE287D /* DnpToolHomeWindow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DnpToolHomeWindow.swift; path = DnpTool/Classes/Home/DnpToolHomeWindow.swift; sourceTree = "<group>"; };
-		C2AD5A9FD07189D94FF9915C3B1A9D8A /* DnpTool.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DnpTool.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
-		C37AFAC1CB94615BC1BF55AC78880D61 /* ResourceBundle-DnpTool-DnpTool-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-DnpTool-DnpTool-Info.plist"; sourceTree = "<group>"; };
-		C500CD9CA9A8EE1F76DACDC4C289849D /* doraemon_close@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "doraemon_close@2x.png"; path = "DnpTool/Assets/doraemon_close@2x.png"; sourceTree = "<group>"; };
-		C732271A8C19FE80019BB74ED0942E4B /* dnptool_enter@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "dnptool_enter@2x.png"; path = "DnpTool/Assets/dnptool_enter@2x.png"; sourceTree = "<group>"; };
+		B9816ED40DF284AFA6BF2C87A2AC4996 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		BEB2C0FDB21D8881BD38B8956A863F4C /* DnpCheckManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DnpCheckManager.swift; path = DnpTool/Classes/Check/DnpCheckManager.swift; sourceTree = "<group>"; };
+		C2AD5A9FD07189D94FF9915C3B1A9D8A /* DnpTool.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = DnpTool.bundle; path = "DnpTool-DnpTool.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7CE8CA2987B06BFB952956D310ADC4E /* Pods-DnpTool_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-DnpTool_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		D1494305F3F5DF8AA8207E589DF00A53 /* Pods-DnpTool_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-DnpTool_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		D461F7440330637606967448E6E46745 /* MetricsConfig.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MetricsConfig.swift; path = DnpTool/Classes/Metrics/MetricsConfig.swift; sourceTree = "<group>"; };
-		D98CBD5E6B432B9B557D2D6F30368D88 /* DnpTool.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = DnpTool.modulemap; sourceTree = "<group>"; };
+		D6A0FB92F0AA8777DEE479BC52AC3A7E /* DnpCheckView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DnpCheckView.swift; path = DnpTool/Classes/Check/DnpCheckView.swift; sourceTree = "<group>"; };
 		DEDB131F9F79AC9418D48A9154A9964F /* Pods-DnpTool_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-DnpTool_Example-umbrella.h"; sourceTree = "<group>"; };
-		E53CE3ED3FF90C69D344911F67535BE2 /* dnptool_img@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "dnptool_img@3x.png"; path = "DnpTool/Assets/dnptool_img@3x.png"; sourceTree = "<group>"; };
-		ED3C1E933623EFD79114F556FBE935EB /* DnpToolStatusBarController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DnpToolStatusBarController.swift; path = DnpTool/Classes/Home/DnpToolStatusBarController.swift; sourceTree = "<group>"; };
-		EF5ACAC9230A8E20002930D6 /* DnpCheckController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DnpCheckController.swift; path = DnpTool/Classes/Home/DnpCheckController.swift; sourceTree = "<group>"; };
+		F755B1139F53F32D35066614F29BE1B5 /* DnpToolCommon.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DnpToolCommon.swift; path = DnpTool/Classes/Common/DnpToolCommon.swift; sourceTree = "<group>"; };
+		F92563F8727248EB2006A5673A473044 /* dnptool_img@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "dnptool_img@3x.png"; path = "DnpTool/Assets/dnptool_img@3x.png"; sourceTree = "<group>"; };
+		FC1855FA3E465FE317CEA80A52E13276 /* dnptool_close@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "dnptool_close@3x.png"; path = "DnpTool/Assets/dnptool_close@3x.png"; sourceTree = "<group>"; };
 		FDB06EA8CEFE70E754BECB1A60AB9E6B /* Pods-DnpTool_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-DnpTool_Tests-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		473CF3DE67228A83EEFCF1061FA20CFF /* Frameworks */ = {
+		2D1F6FAD7F108781C5D2FC6AEBF9386D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -159,11 +157,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A03E123ED1213E3DEC1D99842A3B32A0 /* Frameworks */ = {
+		DEE9FECBD4E6C6067C6F4DB6C154CA3C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				73CEE5370C135A7435147DC1D8CD442B /* Foundation.framework in Frameworks */,
+				C71E738EE2DE88F303C1256E1B0B9A0F /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -173,32 +171,45 @@
 		0C113DB0E40698C72DF04305C79580F5 /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				C82A2635C329FD46981E1F14C3BCC39D /* DnpTool */,
+				FC3A4DF11DA71C1F9348991C8E5516F6 /* DnpTool */,
 			);
 			name = "Development Pods";
 			sourceTree = "<group>";
 		};
-		130B2E1F237B6B365884D69FF615150D /* Common */ = {
+		1C093E755E051A6F08D9DF9EFF7A6AE8 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				7A5648DF2FBB5291E8D788805F081045 /* DnpShadowView.swift */,
-				4902EC1AB6D396AB405F17B09FA75E07 /* DnpToolBaseController.swift */,
-				43F92B67915CFF72A60F75A9DF31D385 /* DnpToolCommon.swift */,
-				8F09A0C1D3EF62C1BBC51B0FDD6B3BCD /* DnpVisualWindow.swift */,
+				6B8D53BD39A53DEF273F77E1851872BE /* dnptool_close@2x.png */,
+				FC1855FA3E465FE317CEA80A52E13276 /* dnptool_close@3x.png */,
+				70ECF69E8BCD42AB64F94D6742749093 /* dnptool_enter@2x.png */,
+				192C52E72EC1D0101858F2B17D960D09 /* dnptool_enter@3x.png */,
+				A702F45A33FA9EFE91D5D5CD13EE7C9F /* dnptool_img@2x.png */,
+				F92563F8727248EB2006A5673A473044 /* dnptool_img@3x.png */,
+				1AED730534F553BFBBB242D361ECD9FC /* dnptool_visual@2x.png */,
+				261D8C3FF92A15C91493A88F1D5F2D5E /* dnptool_visual@3x.png */,
 			);
-			name = Common;
+			name = Resources;
 			sourceTree = "<group>";
 		};
-		2C3DA9EA66615BF60F8AE7B9CEE645F2 /* Support Files */ = {
+		3791976A3BEFC19F28B128E05CC001E0 /* Check */ = {
 			isa = PBXGroup;
 			children = (
-				D98CBD5E6B432B9B557D2D6F30368D88 /* DnpTool.modulemap */,
-				7658B247CB66F72E49DC19539480106D /* DnpTool.xcconfig */,
-				22C4E75B62702435A29C38EDD0930937 /* DnpTool-dummy.m */,
-				B2CF4DB5F3011244D4880589263C9BFF /* DnpTool-Info.plist */,
-				2FB3286AB7DD62C44B739DDCEC470F09 /* DnpTool-prefix.pch */,
-				79EE7F9AAC0E03F553D27B52301FADE9 /* DnpTool-umbrella.h */,
-				C37AFAC1CB94615BC1BF55AC78880D61 /* ResourceBundle-DnpTool-DnpTool-Info.plist */,
+				BEB2C0FDB21D8881BD38B8956A863F4C /* DnpCheckManager.swift */,
+				D6A0FB92F0AA8777DEE479BC52AC3A7E /* DnpCheckView.swift */,
+			);
+			name = Check;
+			sourceTree = "<group>";
+		};
+		41B688A011D3BD542A37766FCE620FD4 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				78CBB26F12D5F18BE2F7887368C4A51C /* DnpTool.modulemap */,
+				0209FAA4D735BF2DEB063EAE747F40F2 /* DnpTool.xcconfig */,
+				AEEAA66FF0AF4B022463BF6FFE2E890B /* DnpTool-dummy.m */,
+				2B1B99CA376D85B776F246318B0B7379 /* DnpTool-Info.plist */,
+				510A87C51B0A9A6F02D11D11EF542A2D /* DnpTool-prefix.pch */,
+				377A5BE8821A62106264B1A5674C0C07 /* DnpTool-umbrella.h */,
+				956A3E2AD2C79427C94DE6666D648A1E /* ResourceBundle-DnpTool-DnpTool-Info.plist */,
 			);
 			name = "Support Files";
 			path = "Example/Pods/Target Support Files/DnpTool";
@@ -220,47 +231,26 @@
 			path = "Target Support Files/Pods-DnpTool_Tests";
 			sourceTree = "<group>";
 		};
-		78EBF8E1131B97A332C346902C3E4804 /* Resources */ = {
+		935E11EA0E4D6F72D6CACEB3779A24A6 /* Metrics */ = {
 			isa = PBXGroup;
 			children = (
-				C732271A8C19FE80019BB74ED0942E4B /* dnptool_enter@2x.png */,
-				A5A56AB1D464CBFA8911048EC2A9998E /* dnptool_enter@3x.png */,
-				3C16262863550377FEB0D20EA9DE4247 /* dnptool_img@2x.png */,
-				E53CE3ED3FF90C69D344911F67535BE2 /* dnptool_img@3x.png */,
-				C500CD9CA9A8EE1F76DACDC4C289849D /* doraemon_close@2x.png */,
-				2A0CE10D79951EFFAEF66DCC6E94F253 /* doraemon_close@3x.png */,
-				4213BE550EE1C80C1B4E4A0EE855FA74 /* doraemon_logo@2x.png */,
-				AF86570A43666A96874ACEB49BFD141F /* doraemon_logo@3x.png */,
-				6DCBD1910E435B532D3CBA4709179F7D /* doraemon_visual@2x.png */,
-				78A6A40334B0629DACF318AA474BADA1 /* doraemon_visual@3x.png */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-		};
-		8C3C0627D3BF4485B45202DA01DEE5A5 /* Metrics */ = {
-			isa = PBXGroup;
-			children = (
-				342705181500A4125F37432FA79AAB8F /* LoadProtocol.swift */,
-				D461F7440330637606967448E6E46745 /* MetricsConfig.swift */,
-				855C09AFF30B9ED8C5F3F6E7B1B5E542 /* MetricsView.swift */,
-				34443A472CB8C38DD90500AB1E310D01 /* NSObject+Swizzle.swift */,
-				5E17228D9C6D867060ECB0F743D88AE0 /* UIView+Metrics.swift */,
+				7BFB8F8E0FB14F0B5276562713162AAD /* LoadProtocol.swift */,
+				8113D1FA7BF3003FF31F44AEDF53A896 /* MetricsConfig.swift */,
+				8772CD1E8507EA340491508D4796C2FF /* MetricsView.swift */,
+				742E5D171D65A58799C34A1938C2C2B0 /* NSObject+Swizzle.swift */,
+				85C2ECA92030B31E0372E94A9F2D04AA /* UIView+Metrics.swift */,
 			);
 			name = Metrics;
 			sourceTree = "<group>";
 		};
-		9E8F8D8F1E282CB12538E308230D5DF5 /* Home */ = {
+		9494FFDD0695E332B33B5FCCD4BBB46D /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				9FB94363BD654BD63332D7230222D80F /* DnpToolEnterView.swift */,
-				88CC7E58071FC313CE9BB94537076A36 /* DnpToolHomeController.swift */,
-				C1F8E74BE779F0564959CFA5A4EE287D /* DnpToolHomeWindow.swift */,
-				367A2C7C9D5EEA546C99CD8DFED565CA /* DnpToolManager.swift */,
-				ED3C1E933623EFD79114F556FBE935EB /* DnpToolStatusBarController.swift */,
-				EF5ACAC9230A8E20002930D6 /* DnpCheckController.swift */,
-				71FF1F042ACA3BB27DDADEEE2D8114F2 /* TestController.swift */,
+				9C18505D416676854D4C6089BF139370 /* DnpTool.podspec */,
+				973329C92E41444BCEAF7C75C023F3BA /* LICENSE */,
+				B9816ED40DF284AFA6BF2C87A2AC4996 /* README.md */,
 			);
-			name = Home;
+			name = Pod;
 			sourceTree = "<group>";
 		};
 		BC3EFF7A93035996D49AEE11EE1E409B /* Pods-DnpTool_Example */ = {
@@ -286,21 +276,6 @@
 				3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */,
 			);
 			name = iOS;
-			sourceTree = "<group>";
-		};
-		C82A2635C329FD46981E1F14C3BCC39D /* DnpTool */ = {
-			isa = PBXGroup;
-			children = (
-				EE82F3210918AB37B5B38B895689F916 /* Check */,
-				130B2E1F237B6B365884D69FF615150D /* Common */,
-				9E8F8D8F1E282CB12538E308230D5DF5 /* Home */,
-				8C3C0627D3BF4485B45202DA01DEE5A5 /* Metrics */,
-				E2DBDE8D71EC20293FFEE424F381E2FB /* Pod */,
-				78EBF8E1131B97A332C346902C3E4804 /* Resources */,
-				2C3DA9EA66615BF60F8AE7B9CEE645F2 /* Support Files */,
-			);
-			name = DnpTool;
-			path = ../..;
 			sourceTree = "<group>";
 		};
 		CD76ACEF791BD389EE0CBCB3CB950806 /* Targets Support Files */ = {
@@ -331,6 +306,20 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		D5D4F03029AD16E49F56E0E28E2F3D19 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				58CD55448EA9F4AC36231FC9D042D2A1 /* DnpCheckController.swift */,
+				455326DBC8A7B3280AD2E3E67D5BF6E0 /* DnpMetricsController.swift */,
+				6B2E1D42E642487D36B15A16B79B46E6 /* DnpToolEnterView.swift */,
+				A157EFE8C4F64C84BE4817BB357FAAD6 /* DnpToolHomeController.swift */,
+				30275E654F11E02EDE97121E29CBA568 /* DnpToolHomeWindow.swift */,
+				B1665444570DD4AF54365D05A654031D /* DnpToolManager.swift */,
+				7246E3BB61007E91795169599913C8B1 /* DnpToolStatusBarController.swift */,
+			);
+			name = Home;
+			sourceTree = "<group>";
+		};
 		D742616DEEE524615AD556CD6A2CD205 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -342,23 +331,31 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		E2DBDE8D71EC20293FFEE424F381E2FB /* Pod */ = {
+		D80879F781B02A9F64A42CF975716E28 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				2E42D48E562BE8E381C32F7A31C8F98D /* DnpTool.podspec */,
-				0604176BA7F625816218D22DC3A4F951 /* LICENSE */,
-				4F16BB869D26D03A82EA2250F774569A /* README.md */,
+				5B8156AC05A22B881C92ECF6933ADC90 /* DnpShadowView.swift */,
+				52E2BF1DACF9B93F612EE2EC04C2DB22 /* DnpToolBaseController.swift */,
+				F755B1139F53F32D35066614F29BE1B5 /* DnpToolCommon.swift */,
+				28FF874FC26E2635F6EEB6589DCBC89B /* DnpToolSwitchController.swift */,
+				583C74EBECA7010BEF68162805F8DBAC /* DnpVisualWindow.swift */,
 			);
-			name = Pod;
+			name = Common;
 			sourceTree = "<group>";
 		};
-		EE82F3210918AB37B5B38B895689F916 /* Check */ = {
+		FC3A4DF11DA71C1F9348991C8E5516F6 /* DnpTool */ = {
 			isa = PBXGroup;
 			children = (
-				1EDC7D391CB5EFE4AECC827CE91571DC /* DnpCheckManager.swift */,
-				B88A14AAB45569B47075C2A6CCC71187 /* DnpCheckView.swift */,
+				3791976A3BEFC19F28B128E05CC001E0 /* Check */,
+				D80879F781B02A9F64A42CF975716E28 /* Common */,
+				D5D4F03029AD16E49F56E0E28E2F3D19 /* Home */,
+				935E11EA0E4D6F72D6CACEB3779A24A6 /* Metrics */,
+				9494FFDD0695E332B33B5FCCD4BBB46D /* Pod */,
+				1C093E755E051A6F08D9DF9EFF7A6AE8 /* Resources */,
+				41B688A011D3BD542A37766FCE620FD4 /* Support Files */,
 			);
-			name = Check;
+			name = DnpTool;
+			path = ../..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -380,11 +377,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		49D24CB7366BC75753C2ACE2BC6D573D /* Headers */ = {
+		FE5425F37C7F57BF80D4980DF37F43B1 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AEB466A4DB3C7E0D8FA4DC363159BE74 /* DnpTool-umbrella.h in Headers */,
+				F06BEB1FB56897214E43ED9B4646E279 /* DnpTool-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -393,17 +390,17 @@
 /* Begin PBXNativeTarget section */
 		2207020FFF7E3169E3AF227FADECFE53 /* DnpTool */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C2F8D11B3BCED877D12CB502E39D2589 /* Build configuration list for PBXNativeTarget "DnpTool" */;
+			buildConfigurationList = 8BE881182AA10729C8C74E879289ECB3 /* Build configuration list for PBXNativeTarget "DnpTool" */;
 			buildPhases = (
-				49D24CB7366BC75753C2ACE2BC6D573D /* Headers */,
-				7E883AA9169C73D2A7392A009BFB53C1 /* Sources */,
-				A03E123ED1213E3DEC1D99842A3B32A0 /* Frameworks */,
-				383C2A5AE70C65D857263108116B21CD /* Resources */,
+				FE5425F37C7F57BF80D4980DF37F43B1 /* Headers */,
+				639735EFB50F8D0E491D121F875BE13F /* Sources */,
+				DEE9FECBD4E6C6067C6F4DB6C154CA3C /* Frameworks */,
+				C53DC64F45A8DF62059A2A5EEAC14227 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				DEB2FBD45440E88FDEDC79C889A35757 /* PBXTargetDependency */,
+				F2F2FE3FD91027F5D0FA70A52307C353 /* PBXTargetDependency */,
 			);
 			name = DnpTool;
 			productName = DnpTool;
@@ -431,11 +428,11 @@
 		};
 		DE39B899CC52DEE3CDD080A75B801531 /* DnpTool-DnpTool */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 464952B0879CF60D776BB49FC19783EC /* Build configuration list for PBXNativeTarget "DnpTool-DnpTool" */;
+			buildConfigurationList = 9B7534F795057C7D323D74EFA6173D00 /* Build configuration list for PBXNativeTarget "DnpTool-DnpTool" */;
 			buildPhases = (
-				4717E5E95321662FAB95BCBCEBB89B8E /* Sources */,
-				473CF3DE67228A83EEFCF1061FA20CFF /* Frameworks */,
-				B6F9E004087B5C98576161895426A720 /* Resources */,
+				25D366F6314C8D8157836B245926CFB1 /* Sources */,
+				2D1F6FAD7F108781C5D2FC6AEBF9386D /* Frameworks */,
+				AB4B23AF5B41309B3F12EA00F08B1FB5 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -495,18 +492,25 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		383C2A5AE70C65D857263108116B21CD /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				CFBC8CFEBE1C6A5D967E7AA8A65AA5FB /* DnpTool.bundle in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		60B9F4B0D24CC346B73C6B0878F328A1 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AB4B23AF5B41309B3F12EA00F08B1FB5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				834B6AF9AF73FAE397B040A5FFE6E43E /* dnptool_close@2x.png in Resources */,
+				C32F66E48F28338B0604B485A368D635 /* dnptool_close@3x.png in Resources */,
+				E2973BB383F5033A7EADF6C6683E90F2 /* dnptool_enter@2x.png in Resources */,
+				06A4FD94D8F8321F26B6167959B2F8AB /* dnptool_enter@3x.png in Resources */,
+				697D884E4FFA6BB621C6785DF4919D99 /* dnptool_img@2x.png in Resources */,
+				D1DA0D14E8D4626ECE629902DA5AA238 /* dnptool_img@3x.png in Resources */,
+				4373EBC7198E659233363DECFC72B7E1 /* dnptool_visual@2x.png in Resources */,
+				AF0F52ED0DB818133EC91A296276E80B /* dnptool_visual@3x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -517,26 +521,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B6F9E004087B5C98576161895426A720 /* Resources */ = {
+		C53DC64F45A8DF62059A2A5EEAC14227 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9991C3E3EF7D830F03E23A60D24A8B60 /* dnptool_enter@2x.png in Resources */,
-				F5CDEEF8581CA42FB1635935BD0BA98E /* dnptool_enter@3x.png in Resources */,
-				EB184C1A2F8251136D97DF398866074F /* dnptool_img@2x.png in Resources */,
-				279600F2DC9EF4FB58FDBA1CD3A98C25 /* dnptool_img@3x.png in Resources */,
-				4E03BD53D9A38ACCB20543BB1F4A02D0 /* doraemon_close@2x.png in Resources */,
-				A47F031EF75003F9A43BB81951A9FF9C /* doraemon_close@3x.png in Resources */,
-				9AFBD47A297F415C3818BACB05256BEE /* doraemon_logo@2x.png in Resources */,
-				229482CB20BFFBBCD78CECF284F6170A /* doraemon_logo@3x.png in Resources */,
-				6776687F9F7E99FE1ED55D85F487D461 /* doraemon_visual@2x.png in Resources */,
-				D8E71B367505AE8A8D623BFC82ABA935 /* doraemon_visual@3x.png in Resources */,
+				A7869FC012F8DCE0D1FF2F15A741745C /* DnpTool.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		25D366F6314C8D8157836B245926CFB1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2D9AE4C6EC700F529B73615D38657C13 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -553,36 +555,30 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4717E5E95321662FAB95BCBCEBB89B8E /* Sources */ = {
+		639735EFB50F8D0E491D121F875BE13F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		7E883AA9169C73D2A7392A009BFB53C1 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				4C326AF6E2BA77FED93D58969BAB4722 /* DnpCheckManager.swift in Sources */,
-				940BBD1DE70088B079836B313FB16BC3 /* DnpCheckView.swift in Sources */,
-				008EACE9FB7FFEC92D7D64A5DCDFCFBE /* DnpShadowView.swift in Sources */,
-				16A77016ED0B64985CDC0C9CA018791D /* DnpTool-dummy.m in Sources */,
-				1FFD102A8E5D644A7017E758C92B65C7 /* DnpToolBaseController.swift in Sources */,
-				56C0A8C087EFAFFC0A6E8F7286AAF469 /* DnpToolCommon.swift in Sources */,
-				2006868586BE54D6C734081AD73F9201 /* DnpToolEnterView.swift in Sources */,
-				9A6B4722D80E094B1E69003C2359224A /* DnpToolHomeController.swift in Sources */,
-				B7FCDDE2DA4BEBE2F8F075404DE29909 /* DnpToolHomeWindow.swift in Sources */,
-				A0225974C5EC4FE6E45C7845B0699D4F /* DnpToolManager.swift in Sources */,
-				52372FE0EDC1870CB419B562AEE1CB6D /* DnpToolStatusBarController.swift in Sources */,
-				B518C5B112A7A69BD640151C06D88FCD /* DnpVisualWindow.swift in Sources */,
-				3FEC42F068962B11259C33F6D8CF0B0B /* LoadProtocol.swift in Sources */,
-				4613A649158877B3417696977EE076B4 /* MetricsConfig.swift in Sources */,
-				FD537145D5A0D0F6553F1E3CDEECE143 /* MetricsView.swift in Sources */,
-				EF5ACACA230A8E20002930D6 /* DnpCheckController.swift in Sources */,
-				54D4F9E0562E7D86189874219AC6A4E9 /* NSObject+Swizzle.swift in Sources */,
-				A5D62B4112A46B4C2499E970EAD8295B /* TestController.swift in Sources */,
-				D73A3BD73B99FEA339F6D8DCE2B25B48 /* UIView+Metrics.swift in Sources */,
+				7724B4CDA9EC78C5596511E885CCC408 /* DnpCheckController.swift in Sources */,
+				EB9ACED7255B287CBEE97BB15FC1B652 /* DnpCheckManager.swift in Sources */,
+				BAB71E2E2FA8E2D5D298CAECB6EF0EF6 /* DnpCheckView.swift in Sources */,
+				D37E33AFB28974DE18805CB8EF0CD624 /* DnpMetricsController.swift in Sources */,
+				9DC8E5C5AA73FDD3EB9266107F53CCE7 /* DnpShadowView.swift in Sources */,
+				EA1AEFB71E3B875C89B0DDFCF48EA201 /* DnpTool-dummy.m in Sources */,
+				69778EC075771D24A347C6F19CCDEBBC /* DnpToolBaseController.swift in Sources */,
+				4B8E75BA359E0167C2994C46BD4CEDF4 /* DnpToolCommon.swift in Sources */,
+				A48B13DC64106DEA020179B7861C69A5 /* DnpToolEnterView.swift in Sources */,
+				915A0A1751A53669B06B53A9A970C329 /* DnpToolHomeController.swift in Sources */,
+				0E47F3714F6B3ED8EAD7F5D5818EEE88 /* DnpToolHomeWindow.swift in Sources */,
+				2D534833AD584B2AD9467300E7B07006 /* DnpToolManager.swift in Sources */,
+				4F349FA94D7AAE220DD5EE0C51064C2C /* DnpToolStatusBarController.swift in Sources */,
+				56CBA8EA1812C9711BDE5B05B49A6CBE /* DnpToolSwitchController.swift in Sources */,
+				62BBF5E045B5077BF6C90DBDF17E0D3F /* DnpVisualWindow.swift in Sources */,
+				F422E940ED1589B8365F67E80AD1B9D5 /* LoadProtocol.swift in Sources */,
+				A9AF5CD94B16319735C2F5042D822CCA /* MetricsConfig.swift in Sources */,
+				1EF347B97BF82B5E3160CE92CF6E5083 /* MetricsView.swift in Sources */,
+				DE1A74ECDD0F8EBF60121B3C07EC494C /* NSObject+Swizzle.swift in Sources */,
+				7BBC168BD638BE123FC3F0D0555C4B02 /* UIView+Metrics.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -595,21 +591,53 @@
 			target = 6FC748C2BC198A762656C80D693D12AB /* Pods-DnpTool_Example */;
 			targetProxy = 8F294EB61E87A8D220A981EF6AA46C3B /* PBXContainerItemProxy */;
 		};
-		DEB2FBD45440E88FDEDC79C889A35757 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "DnpTool-DnpTool";
-			target = DE39B899CC52DEE3CDD080A75B801531 /* DnpTool-DnpTool */;
-			targetProxy = 48C329CFF2B6AD926FECA150001A0B50 /* PBXContainerItemProxy */;
-		};
 		E4670C69B6B2E8F289CC9D05F4DDB2AB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = DnpTool;
 			target = 2207020FFF7E3169E3AF227FADECFE53 /* DnpTool */;
 			targetProxy = A79B3131FA390ED78F9EAF7A44FD1A7E /* PBXContainerItemProxy */;
 		};
+		F2F2FE3FD91027F5D0FA70A52307C353 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "DnpTool-DnpTool";
+			target = DE39B899CC52DEE3CDD080A75B801531 /* DnpTool-DnpTool */;
+			targetProxy = EC386151E558D4FEBB752A0605665EBA /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		093F1BA588AA073214DA6579DF6A2910 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0209FAA4D735BF2DEB063EAE747F40F2 /* DnpTool.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/DnpTool/DnpTool-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/DnpTool/DnpTool-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/DnpTool/DnpTool.modulemap";
+				PRODUCT_MODULE_NAME = DnpTool;
+				PRODUCT_NAME = DnpTool;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		0FA62E85617D4C2AA2BB91DA4B36B24E /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 88B9BBC122999854EF4B77EC44F1993A /* Pods-DnpTool_Tests.release.xcconfig */;
@@ -644,9 +672,9 @@
 			};
 			name = Release;
 		};
-		282C788B15D2B3038234BC133BA34245 /* Debug */ = {
+		3B81AD2FCAF54F4770A6E2FFB11C1375 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7658B247CB66F72E49DC19539480106D /* DnpTool.xcconfig */;
+			baseConfigurationReference = 0209FAA4D735BF2DEB063EAE747F40F2 /* DnpTool.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -728,7 +756,8 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
@@ -767,6 +796,22 @@
 			};
 			name = Debug;
 		};
+		577F8B2463EA6B32DDC93BA6C84B70E3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0209FAA4D735BF2DEB063EAE747F40F2 /* DnpTool.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/DnpTool";
+				INFOPLIST_FILE = "Target Support Files/DnpTool/ResourceBundle-DnpTool-DnpTool-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_NAME = DnpTool;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
 		5D7F8094649592949FE239BB09B9B278 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1CD8FBB389C1C17AECC13ADC41420B1A /* Pods-DnpTool_Example.release.xcconfig */;
@@ -798,38 +843,6 @@
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		623DD6D9066034BEA4C9F19C52B73CB4 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7658B247CB66F72E49DC19539480106D /* DnpTool.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/DnpTool";
-				INFOPLIST_FILE = "Target Support Files/DnpTool/ResourceBundle-DnpTool-DnpTool-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				PRODUCT_NAME = DnpTool;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				WRAPPER_EXTENSION = bundle;
-			};
-			name = Debug;
-		};
-		645F6515AE10B89925D846498B0C1CC9 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7658B247CB66F72E49DC19539480106D /* DnpTool.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/DnpTool";
-				INFOPLIST_FILE = "Target Support Files/DnpTool/ResourceBundle-DnpTool-DnpTool-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				PRODUCT_NAME = DnpTool;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				WRAPPER_EXTENSION = bundle;
 			};
 			name = Release;
 		};
@@ -897,37 +910,21 @@
 			};
 			name = Debug;
 		};
-		8C07141E2325D1BD14DBFF78F8DAFAF7 /* Release */ = {
+		AE4E13B922D0A96B5EA996D967382E43 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7658B247CB66F72E49DC19539480106D /* DnpTool.xcconfig */;
+			baseConfigurationReference = 0209FAA4D735BF2DEB063EAE747F40F2 /* DnpTool.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/DnpTool/DnpTool-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/DnpTool/DnpTool-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/DnpTool";
+				INFOPLIST_FILE = "Target Support Files/DnpTool/ResourceBundle-DnpTool-DnpTool-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/DnpTool/DnpTool.modulemap";
-				PRODUCT_MODULE_NAME = DnpTool;
 				PRODUCT_NAME = DnpTool;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
+				WRAPPER_EXTENSION = bundle;
 			};
-			name = Release;
+			name = Debug;
 		};
 		F36F09F158D7E66850D9EABB3060321E /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -974,15 +971,6 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		464952B0879CF60D776BB49FC19783EC /* Build configuration list for PBXNativeTarget "DnpTool-DnpTool" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				623DD6D9066034BEA4C9F19C52B73CB4 /* Debug */,
-				645F6515AE10B89925D846498B0C1CC9 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -992,20 +980,29 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		8BE881182AA10729C8C74E879289ECB3 /* Build configuration list for PBXNativeTarget "DnpTool" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3B81AD2FCAF54F4770A6E2FFB11C1375 /* Debug */,
+				093F1BA588AA073214DA6579DF6A2910 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9B7534F795057C7D323D74EFA6173D00 /* Build configuration list for PBXNativeTarget "DnpTool-DnpTool" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AE4E13B922D0A96B5EA996D967382E43 /* Debug */,
+				577F8B2463EA6B32DDC93BA6C84B70E3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		A15F04CC66956DBCEBB588D4B8C7F189 /* Build configuration list for PBXNativeTarget "Pods-DnpTool_Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4D677A48F21EE2BF0CDB7EC22C0BDDF6 /* Debug */,
 				0FA62E85617D4C2AA2BB91DA4B36B24E /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		C2F8D11B3BCED877D12CB502E39D2589 /* Build configuration list for PBXNativeTarget "DnpTool" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				282C788B15D2B3038234BC133BA34245 /* Debug */,
-				8C07141E2325D1BD14DBFF78F8DAFAF7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

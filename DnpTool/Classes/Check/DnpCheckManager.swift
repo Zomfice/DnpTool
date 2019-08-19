@@ -13,7 +13,7 @@ public class DnpCheckManager: NSObject {
     
     private override init() {
         super.init()
-        NotificationCenter.default.addObserver(self, selector: #selector(closePlugin(notification:)), name: NSNotification.Name(rawValue: CloseNotification), object: nil)
+        //NotificationCenter.default.addObserver(self, selector: #selector(closePlugin(notification:)), name: NSNotification.Name(rawValue: CloseNotification), object: nil)
     }
     
     public func show() {
@@ -26,7 +26,7 @@ public class DnpCheckManager: NSObject {
             }
         }
         self.checkView?.show()
-        NotificationCenter.default.post(name: NSNotification.Name(rawValue: ShowNotification), object: self, userInfo: nil)
+        //NotificationCenter.default.post(name: NSNotification.Name(rawValue: ShowNotification), object: self, userInfo: nil)
     }
     
     public func hidden() {
