@@ -11,9 +11,9 @@ import UIKit
 internal let screenwidth = UIScreen.main.bounds.width
 internal let screenheight = UIScreen.main.bounds.height
 
-internal let navigationHeight = iphoneX ? 88 : 64
+internal let navigationHeight: CGFloat = iphoneX ? 88.0 : 64.0
 
-internal let statusbarHeight = iphoneX ? 44.0 : 20.0
+internal let statusbarHeight: CGFloat = iphoneX ? 44.0 : 20.0
 
 internal let tabBarHeight: CGFloat = iphoneX ? 83.0 : 49.0
 
@@ -132,5 +132,18 @@ extension NSString{
     }
 }
 
+// MARK: TableView`s reuseIdentifier
+protocol ReuseViewProtocol: NSObjectProtocol {
+    static var reuseIdentifier: String { get }
+}
+
+extension UIView: ReuseViewProtocol {
+    public static var reuseIdentifier: String {
+        return "\(self)"
+    }
+}
+
 public let ShowNotification = "ShowPluginNotification"
 public let CloseNotification = "ClosePluginNotification"
+
+/// exit(0);Kill App

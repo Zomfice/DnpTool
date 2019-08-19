@@ -12,6 +12,19 @@ class DnpToolBaseController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.white
+        self.navigationController?.navigationBar.tintColor = UIColor.rgb(red: 100, green: 100, blue: 100)
+        if self.navigationController?.viewControllers.count == 1{
+            self.navigationController?.setNavigationBarHidden(true, animated: false)
+        }else{
+            self.navigationController?.setNavigationBarHidden(false, animated: false)
+        }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        if self.navigationController?.viewControllers.count == 1{
+            self.navigationController?.setNavigationBarHidden(true, animated: false)
+        }
     }
     
     override func viewWillDisappear(_ animated: Bool) {

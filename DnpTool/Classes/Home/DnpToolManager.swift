@@ -13,10 +13,6 @@ public class DnpToolManager: NSObject {
     var startPlugins = [String]()
     
     public func show() {
-//        for i in 0...startPlugins.count {
-//            let pluginName = startPlugins[i]
-//
-//        }
         self.initEnter()
     }
     
@@ -25,4 +21,7 @@ public class DnpToolManager: NSObject {
         enterView.makeKeyAndVisible()
     }
     
+    func hidden() {
+        enterView.isHidden = true
+    }
 }
