@@ -146,4 +146,6 @@ extension UIView: ReuseViewProtocol {
 public let ShowNotification = "ShowPluginNotification"
 public let CloseNotification = "ClosePluginNotification"
 
+public let DnpLogNotification = "DnpLogNotification"
+
 /// exit(0);Kill App

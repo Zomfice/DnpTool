@@ -1,16 +1,21 @@
 PODS:
-  - DnpTool (1.0.8):
-    - DnpTool/Check (= 1.0.8)
-    - DnpTool/Common (= 1.0.8)
-    - DnpTool/Home (= 1.0.8)
-    - DnpTool/Metrics (= 1.0.8)
-  - DnpTool/Check (1.0.8):
+  - DnpTool (1.1.0):
+    - DnpTool/Check (= 1.1.0)
+    - DnpTool/Common (= 1.1.0)
+    - DnpTool/Home (= 1.1.0)
+    - DnpTool/Log (= 1.1.0)
+    - DnpTool/Metrics (= 1.1.0)
+  - DnpTool/Check (1.1.0):
     - DnpTool/Common
-  - DnpTool/Common (1.0.8)
-  - DnpTool/Home (1.0.8):
+  - DnpTool/Common (1.1.0)
+  - DnpTool/Home (1.1.0):
     - DnpTool/Check
     - DnpTool/Common
-  - DnpTool/Metrics (1.0.8)
+    - DnpTool/Metrics
+  - DnpTool/Log (1.1.0):
+    - DnpTool/Common
+  - DnpTool/Metrics (1.1.0):
+    - DnpTool/Common
 
 DEPENDENCIES:
   - DnpTool (from `../`)
@@ -20,7 +25,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  DnpTool: b761afd532c460c42f1d595032acb7a58e86c827
+  DnpTool: a8c10230af8e28cba51e0f5843e10dac9b29b9d7
 
 PODFILE CHECKSUM: 8eefc7a38b3895fa1d9a889811868a206833bb92
 

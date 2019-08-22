@@ -33,10 +33,10 @@ class DnpToolHomeController: DnpToolBaseController {
         [
             "head":"工具",
             "data":[
-                ["title": "Log","icon":"dnptool_img","jump":""],
+                ["title": "Log","icon":"dnptool_img","jump":"DnpLogListController"],
                 ["title": "元素","icon":"dnptool_img","jump":"DnpMetricsController"],
                 ["title": "控件","icon":"dnptool_img","jump":"DnpCheckController"],
-                ["title": "标尺","icon":"dnptool_img","jump":""]
+                ["title": "标尺","icon":"dnptool_img","jump":"DnpRulerController"]
             ]
         ],
         [

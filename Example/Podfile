@@ -2,6 +2,7 @@ use_frameworks!
 
 target 'DnpTool_Example' do
   pod 'DnpTool', :path => '../'
+  pod 'ZLNetworkComponent'
 
   target 'DnpTool_Tests' do
     inherit! :search_paths
