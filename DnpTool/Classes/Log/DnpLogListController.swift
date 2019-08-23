@@ -21,6 +21,7 @@ class DnpLogListController: DnpToolBaseController {
         m_tableView.backgroundColor = UIColor.white
         m_tableView.estimatedRowHeight = 70
         m_tableView.tableFooterView = UIView()
+        m_tableView.separatorStyle = .none
         m_tableView.register(DnpLogCell.self, forCellReuseIdentifier: DnpLogCell.reuseIdentifier)
         return m_tableView
     }()
@@ -62,7 +63,7 @@ class DnpLogListController: DnpToolBaseController {
         let expressResults0 = express0?.matches(in: content, options: NSRegularExpression.MatchingOptions(rawValue: 0), range: contentRange0)
         if let result = expressResults0{
             for check in result {
-                let range = NSRange(location: check.range.location + 5, length: check.range.length > 5 ? check.range.length - 5 : check.range.length)
+                let range = NSRange(location: check.range.location + 5, length: check.range.length > 5 ? check.range.length - 6 : check.range.length)
                 let subStr = (content as NSString).substring(with: range)
                 return subStr
             }
@@ -92,14 +93,16 @@ extension DnpLogListController: UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let logcell = tableView.dequeueReusableCell(withIdentifier: DnpLogCell.reuseIdentifier, for: indexPath) as! DnpLogCell
         let logmodel = DnpLogListController.dataArray[indexPath.row]
-        logcell.textLabel?.text = logmodel.url
+        logcell.title.text = logmodel.url
         return logcell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let logmodel = DnpLogListController.dataArray[indexPath.row]
         let logdetail = DnpLogDetailController()
+        logdetail.title = logmodel.url
         logdetail.content = logmodel.response
         self.navigationController?.pushViewController(logdetail, animated: true)
     }
+    
 }

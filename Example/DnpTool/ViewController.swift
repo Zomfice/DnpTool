@@ -24,8 +24,20 @@ class ViewController: UIViewController {
         ZLNetWork.request(requestType: .get, path: path, parameters: nil, netConfig: nil, progressBlock: nil, dataTaskBlock: nil, serviceResponse: nil) { (response, error) in
             if let m_response = response{
                 //print("----\(m_response)")
-                
-                NotificationCenter.default.post(name: NSNotification.Name(rawValue: DnpLogNotification), object: nil, userInfo: ["DnpLog":"\(m_response)"])
+                let headers = "请求头"
+                let param = "请求参数"
+                var result = "nil"
+                if let mm_response = m_response as? [String:Any]{
+                    result =  mm_response.customDescription(level: 0)
+                }else{
+                    result = "\(m_response)"
+                }
+                let netlog = "URL: " + "\(path)" + "\n\n"
+                    + "Method: " + "POST" + "\n\n"
+                    + "Headers: " + "\(headers)" + "\n\n"
+                    + "RequestBody: " + "\(param)" + "\n\n"
+                    + "Response: \n" + "\(result)" + "\n\n"
+                NotificationCenter.default.post(name: NSNotification.Name(rawValue: DnpLogNotification), object: nil, userInfo: ["DnpLog":netlog])
             }
         }
     }
@@ -106,3 +118,37 @@ extension ViewController {
         return nil;
     }
 }
+
+/*
+ #if DEBUG
+ var headers = "nil"
+ if let m_header = ZLNetWork.sharedManager?.requestSerializer.httpRequestHeaders{
+ headers = String.jsonToString(dic: m_header)
+ }
+ var methodstr = "unknown"
+ switch method {
+ case .get:
+ methodstr = "GET"
+ case .post:
+ methodstr = "POST"
+ default:
+ break
+ }
+ var param = "nil"
+ if let m_param = parameters as? [String: Any]{
+ param = String.jsonToString(dic: m_param)
+ }
+ var result = "nil"
+ if let m_response = response as? [String:Any]{
+ result =  m_response.customDescription(level: 0)
+ }else{
+ result = "\(response ?? "")"
+ }
+ let netlog = "URL: " + "\(urlPath)" + "\n\n"
+ + "Method: " + "\(methodstr)" + "\n\n"
+ + "Headers: " + "\(headers)" + "\n\n"
+ + "RequestBody: " + "\(param)" + "\n\n"
+ + "Response: \n" + "\(result)" + "\n\n"
+ NotificationCenter.default.post(name: NSNotification.Name(rawValue: "DnpLogNotification"), object: nil,userInfo: ["DnpLog":netlog])
+ #endif
+ */

@@ -13,7 +13,7 @@ class DnpLogDetailController: DnpToolBaseController {
         let m_textView = UITextView()
         m_textView.backgroundColor = UIColor.white
         m_textView.translatesAutoresizingMaskIntoConstraints = false
-        m_textView.setContentOffset(CGPoint(x: 0, y: navigationHeight), animated: false)
+        m_textView.setContentOffset(CGPoint(x: 0, y: -navigationHeight), animated: false)
         return m_textView
     }()
     
