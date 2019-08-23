@@ -1,0 +1,6 @@
+framework module ZLNetworkComponent {
+  umbrella header "ZLNetworkComponent-umbrella.h"
+
+  export *
+  module * { export * }
+}

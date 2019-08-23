@@ -1,32 +1,59 @@
 PODS:
-  - DnpTool (1.1.0):
-    - DnpTool/Check (= 1.1.0)
-    - DnpTool/Common (= 1.1.0)
-    - DnpTool/Home (= 1.1.0)
-    - DnpTool/Log (= 1.1.0)
-    - DnpTool/Metrics (= 1.1.0)
-  - DnpTool/Check (1.1.0):
+  - AFNetworking (3.2.1):
+    - AFNetworking/NSURLSession (= 3.2.1)
+    - AFNetworking/Reachability (= 3.2.1)
+    - AFNetworking/Security (= 3.2.1)
+    - AFNetworking/Serialization (= 3.2.1)
+    - AFNetworking/UIKit (= 3.2.1)
+  - AFNetworking/NSURLSession (3.2.1):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.2.1)
+  - AFNetworking/Security (3.2.1)
+  - AFNetworking/Serialization (3.2.1)
+  - AFNetworking/UIKit (3.2.1):
+    - AFNetworking/NSURLSession
+  - DnpTool (1.1.1):
+    - DnpTool/Check (= 1.1.1)
+    - DnpTool/Common (= 1.1.1)
+    - DnpTool/Home (= 1.1.1)
+    - DnpTool/Log (= 1.1.1)
+    - DnpTool/Metrics (= 1.1.1)
+  - DnpTool/Check (1.1.1):
     - DnpTool/Common
-  - DnpTool/Common (1.1.0)
-  - DnpTool/Home (1.1.0):
+  - DnpTool/Common (1.1.1)
+  - DnpTool/Home (1.1.1):
     - DnpTool/Check
     - DnpTool/Common
+    - DnpTool/Log
     - DnpTool/Metrics
-  - DnpTool/Log (1.1.0):
+  - DnpTool/Log (1.1.1):
     - DnpTool/Common
-  - DnpTool/Metrics (1.1.0):
+  - DnpTool/Metrics (1.1.1):
     - DnpTool/Common
+  - ZLNetworkComponent (1.0.4):
+    - AFNetworking
 
 DEPENDENCIES:
   - DnpTool (from `../`)
+  - ZLNetworkComponent
+
+SPEC REPOS:
+  http://120.55.72.192/ios/DNSpecs.git:
+    - ZLNetworkComponent
+  https://github.com/cocoapods/specs.git:
+    - AFNetworking
 
 EXTERNAL SOURCES:
   DnpTool:
     :path: "../"
 
 SPEC CHECKSUMS:
-  DnpTool: a8c10230af8e28cba51e0f5843e10dac9b29b9d7
+  AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
+  DnpTool: 78714fa5c2e6a67459395a5908d8d996f2b0ef21
+  ZLNetworkComponent: 10e1b9f3f447d4bf2826ee59704a1778fc08db02
 
-PODFILE CHECKSUM: 8eefc7a38b3895fa1d9a889811868a206833bb92
+PODFILE CHECKSUM: 29c956630a2f2341c1e3ca478c51711db09498fb
 
 COCOAPODS: 1.7.5

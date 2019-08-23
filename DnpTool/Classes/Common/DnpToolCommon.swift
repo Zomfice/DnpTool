@@ -102,6 +102,21 @@ extension NSObject{
     }
 }
 
+extension String{
+    static func jsonToString(dic : [String: Any]?) -> String{
+        guard let dict = dic else {
+            return ""
+        }
+        if JSONSerialization.isValidJSONObject(dict){
+            let data = try? JSONSerialization.data(withJSONObject: dict, options: .prettyPrinted)
+            if let m_data = data,let encodeString = String(data: m_data, encoding: .utf8){
+                return encodeString
+            }
+        }
+        return ""
+    }
+}
+
 // MARK: 几位小数
 extension CGFloat {
     func format(f: String = ".1") -> String {
@@ -146,6 +161,14 @@ extension UIView: ReuseViewProtocol {
 public let ShowNotification = "ShowPluginNotification"
 public let CloseNotification = "ClosePluginNotification"
 
+/// Use for Log Notification Name
 public let DnpLogNotification = "DnpLogNotification"
+
+/*
+ Use for Log Notification userInfo key
+ 
+ NotificationCenter.default.post(name: NSNotification.Name(rawValue: DnpLogNotification), object: nil,userInfo: [DnpLog:[String: Any])
+ */
+public let DnpLog = "DnpLog"
 
 /// exit(0);Kill App

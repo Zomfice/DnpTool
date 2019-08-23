@@ -19,9 +19,17 @@ public class DnpToolManager: NSObject {
     func initEnter() {
         enterView = DnpToolEnterView()
         enterView.makeKeyAndVisible()
+        initconfig()
     }
     
     func hidden() {
         enterView.isHidden = true
+    }
+    
+    func initconfig() {
+        /// 初始化Log监听
+        if UserDefaults.standard.bool(forKey: "\(DnpToolLogController.self)") {
+            DnpLogListController.addnotification()
+        }
     }
 }

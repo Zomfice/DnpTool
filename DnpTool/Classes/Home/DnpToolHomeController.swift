@@ -50,6 +50,7 @@ class DnpToolHomeController: DnpToolBaseController {
         [
             "head":"其他",
             "data":[
+                ["title": "开启Log","icon":"dnptool_img","jump":"DnpToolLogController"],
                 ["title": "关闭面板","icon":"dnptool_img","jump":"","type": "1"]
             ]
         ]

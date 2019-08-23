@@ -8,14 +8,44 @@
 
 import UIKit
 import DnpTool
+import ZLNetworkComponent
 
 class ViewController: UIViewController {
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        
+        //let timer = Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(request), userInfo: nil, repeats: true)
+        //RunLoop.current.add(timer, forMode: .common)
+        request()
+    }
+    
+    @objc func request() {
+        let path = "http://meizi.leanapp.cn/category/All/page/1"
+        ZLNetWork.request(requestType: .get, path: path, parameters: nil, netConfig: nil, progressBlock: nil, dataTaskBlock: nil, serviceResponse: nil) { (response, error) in
+            if let m_response = response{
+                //print("----\(m_response)")
+                
+                NotificationCenter.default.post(name: NSNotification.Name(rawValue: DnpLogNotification), object: nil, userInfo: ["DnpLog":"\(m_response)"])
+            }
+        }
+    }
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         DnpToolManager.shareInstance.show()
-        
 
+    }
+    
+    
+    
+    
+}
+
+
+
+extension ViewController {
+    func charcalcult() {
         let string = "abca"//bcbb"//pwwkew
         let charArr:[Character] = Array(string)
         
@@ -47,6 +77,7 @@ class ViewController: UIViewController {
         print("----\(count)")
     }
     
+    
     func metrics() {
         MetricsConfig.shared.setEnable(false)
         
@@ -60,7 +91,7 @@ class ViewController: UIViewController {
             print("----\(effect.isKind(of: clname))")
         }
     }
-
+    
     /// 获取系统类类型
     public func swiftClassFromString_system(className: String) -> AnyClass? {
         return NSClassFromString(className)
@@ -74,6 +105,4 @@ class ViewController: UIViewController {
         }
         return nil;
     }
-    
 }
-

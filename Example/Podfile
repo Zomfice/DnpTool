@@ -1,3 +1,5 @@
+source 'https://github.com/CocoaPods/Specs.git'
+source 'http://120.55.72.192/ios/DNSpecs.git'
 use_frameworks!
 
 target 'DnpTool_Example' do

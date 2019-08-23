@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>4</key>
+	<dict>
+		<key>capi/pay/public/pay/appPrepay</key>
+		<string>C2C-预支付</string>
+		<key>capi/pay/public/pay/payTypeList</key>
+		<string>C2C-支付类型列表</string>
+		<key>capi/order/front/channel/addOrderV244</key>
+		<string>C2C-提交订单</string>
+		<key>capi/channel/qiuxie/submitsell</key>
+		<string>球鞋发布出售</string>
+		<key>api/Mall/PayTypeListV263</key>
+		<string>B2C-支付类型列表</string>
+		<key>api/Mall/AddOrderV244</key>
+		<string>B2C-提交订单</string>
+		<key>api/Mall/PrePay</key>
+		<string>B2C-预支付</string>
+		<key>api/User/LoginByAuthCode</key>
+		<string>验证码登录/注册</string>
+		<key>api/User/RegisterOpen</key>
+		<string>第三方注册/绑定</string>
+		<key>api/User/Login</key>
+		<string>账号密码登录</string>
+		<key>api/User/LoginOpen</key>
+		<string>第三方登录</string>
+		<key>threePartLoginAuthFailed</key>
+		<string>三方登录授权失败</string>
+	</dict>
+	<key>3</key>
+	<dict>
+		<key>api/user/RegisterV235</key>
+		<string>注册</string>
+		<key>api/User/LoginAuto</key>
+		<string>自动登录</string>
+		<key>api/User/LoginByCode</key>
+		<string>验证码登录</string>
+		<key>api/Product/GetItems</key>
+		<string>B2C-获取子项</string>
+		<key>capi/channel/qiuxie/getNewItemsv37</key>
+		<string>C2C-获取子项</string>
+		<key>api/Mall/AddShoppingCartV243</key>
+		<string>添加购物车</string>
+	</dict>
+</dict>
+</plist>
