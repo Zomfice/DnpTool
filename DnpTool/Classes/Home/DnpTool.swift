@@ -16,14 +16,14 @@ import UIKit
         self.initEnter()
     }
     
+    internal func hidden() {
+        enterView.isHidden = true
+    }
+    
     internal func initEnter() {
         enterView = DnpToolEnterView()
         enterView.makeKeyAndVisible()
         initconfig()
-    }
-    
-    internal func hidden() {
-        enterView.isHidden = true
     }
     
     internal func initconfig() {

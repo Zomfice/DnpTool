@@ -16,7 +16,7 @@ class DnpLogModel {
 class DnpLogListController: DnpToolBaseController {
 
     lazy var tableView: UITableView = {
-        let m_tableView = UITableView(frame: CGRect(x: 0, y: navigationHeight, width: screenwidth, height: screenheight - navigationHeight), style: .plain)
+        let m_tableView = UITableView(frame: CGRect(x: 0, y: 0, width: screenwidth, height: screenheight ), style: .plain)
         m_tableView.delegate = self
         m_tableView.dataSource = self
         m_tableView.backgroundColor = UIColor.white
@@ -32,6 +32,7 @@ class DnpLogListController: DnpToolBaseController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.addSubview(self.tableView)
+        self.layout()
         NotificationCenter.default.addObserver(self, selector: #selector(reload(sender:)), name: NSNotification.Name(rawValue: "DnpLogListReload"), object: nil)
     }
     
@@ -108,4 +109,12 @@ extension DnpLogListController: UITableViewDelegate,UITableViewDataSource{
         self.navigationController?.pushViewController(logdetail, animated: true)
     }
     
+    func layout() {
+        self.view.addSubview(self.tableView)
+        self.tableView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint(item: self.tableView, attribute: .left, relatedBy: .equal, toItem: self.view, attribute: .left, multiplier: 1.0, constant: 0).isActive = true
+        NSLayoutConstraint(item: self.tableView, attribute: .right, relatedBy: .equal, toItem: self.view, attribute: .right, multiplier: 1.0, constant: 0).isActive = true
+        NSLayoutConstraint(item: self.tableView, attribute: .top, relatedBy: .equal, toItem: self.view, attribute: .top, multiplier: 1.0, constant: 0).isActive = true
+        NSLayoutConstraint(item: self.tableView, attribute: .bottom, relatedBy: .equal, toItem: self.view, attribute: .bottom, multiplier: 1.0, constant: 0).isActive = true
+    }
 }
