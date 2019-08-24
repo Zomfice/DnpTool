@@ -9,6 +9,7 @@ import UIKit
 
 class DnpLogModel {
     var url : String = ""
+    var success : Bool = true
     var response : String = ""
 }
 
@@ -52,6 +53,7 @@ class DnpLogListController: DnpToolBaseController {
         let logmodel = DnpLogModel()
         logmodel.url = self.dealLog(content: content)
         logmodel.response = content
+        logmodel.success = !content.contains("Error Domain")
         DnpLogListController.dataArray.append(logmodel)
     }
     
@@ -93,7 +95,8 @@ extension DnpLogListController: UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let logcell = tableView.dequeueReusableCell(withIdentifier: DnpLogCell.reuseIdentifier, for: indexPath) as! DnpLogCell
         let logmodel = DnpLogListController.dataArray[indexPath.row]
-        logcell.title.text = logmodel.url
+        let prefix = logmodel.success ? "✅  " : "❌  "
+        logcell.title.text = prefix + logmodel.url
         return logcell
     }
     
