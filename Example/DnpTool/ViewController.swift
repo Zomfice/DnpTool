@@ -25,6 +25,7 @@ class ViewController: UIViewController {
             if let m_response = response{
                 //print("----\(m_response)")
                 DnpTool.dnpLogDataFormat(url: path, method: "POST", headers: "请求头", body: "请求参数", response: m_response, error: error)
+                
                 /*
                 let headers = "请求头"
                 let param = "请求参数"

@@ -34,7 +34,7 @@ import UIKit
     }
     
     /// 是否显示DnpLog
-    @objc public var logisShow : Bool{
+    @objc public static var logisShow : Bool{
         return UserDefaults.standard.bool(forKey: "\(DnpToolLogController.self)")
     }
     
