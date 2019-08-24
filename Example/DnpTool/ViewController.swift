@@ -21,6 +21,8 @@ class ViewController: UIViewController {
     
     @objc func request() {
         let path = "http://meizi.leanapp.cn/category/All/page/1"
+        DnpTool.dnpLogDataFormat(url: path, method: "POST", headers: "请求头", body: "请求参数", response: nil, error: nil)
+        return
         ZLNetWork.request(requestType: .get, path: path, parameters: nil, netConfig: nil, progressBlock: nil, dataTaskBlock: nil, serviceResponse: nil) { (response, error) in
             if let m_response = response{
                 //print("----\(m_response)")
@@ -42,6 +44,8 @@ class ViewController: UIViewController {
                     + "Response: \n" + "\(result)" + "\n\n"
                 NotificationCenter.default.post(name: NSNotification.Name(rawValue: DnpLogNotification), object: nil, userInfo: ["DnpLog":netlog])
                 */
+            }else{
+                DnpTool.dnpLogDataFormat(url: path, method: "POST", headers: "请求头", body: "请求参数", response: nil, error: error)
             }
         }
     }
