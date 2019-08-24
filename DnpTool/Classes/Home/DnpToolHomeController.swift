@@ -105,7 +105,7 @@ class DnpToolHomeController: DnpToolBaseController {
         let alertController = UIAlertController(title: "提示", message: "关闭当前工具面板", preferredStyle: .alert)
         let cancelAction = UIAlertAction(title: "取消", style: .cancel, handler: nil)
         let okAction = UIAlertAction(title: "确定", style: .default) { (action) in
-            DnpToolManager.shareInstance.hidden()
+            DnpTool.shareInstance.hidden()
         }
         alertController.addAction(cancelAction)
         alertController.addAction(okAction)
