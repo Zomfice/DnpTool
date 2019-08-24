@@ -21,10 +21,17 @@ class DnpToolBaseController: UIViewController {
         }
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         if self.navigationController?.viewControllers.count == 1{
             self.navigationController?.setNavigationBarHidden(true, animated: false)
+        }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        if self.navigationController?.viewControllers.count != 1 {
+            self.navigationController?.setNavigationBarHidden(false, animated: false)
         }
     }
     

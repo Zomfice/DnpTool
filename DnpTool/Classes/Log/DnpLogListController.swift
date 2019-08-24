@@ -32,6 +32,7 @@ class DnpLogListController: DnpToolBaseController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.addSubview(self.tableView)
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "清空", style: .plain, target: self, action: #selector(rightAction))
         self.layout()
         NotificationCenter.default.addObserver(self, selector: #selector(reload(sender:)), name: NSNotification.Name(rawValue: "DnpLogListReload"), object: nil)
     }
@@ -55,6 +56,9 @@ class DnpLogListController: DnpToolBaseController {
         logmodel.url = self.dealLog(content: content)
         logmodel.response = content
         logmodel.success = !content.contains("Error Domain")
+        if DnpLogListController.dataArray.count > 3 {
+            DnpLogListController.dataArray.removeFirst()
+        }
         DnpLogListController.dataArray.append(logmodel)
     }
     
@@ -107,6 +111,11 @@ extension DnpLogListController: UITableViewDelegate,UITableViewDataSource{
         logdetail.title = logmodel.url
         logdetail.content = logmodel.response
         self.navigationController?.pushViewController(logdetail, animated: true)
+    }
+    
+    @objc func rightAction() {
+        DnpLogListController.dataArray.removeAll()
+        self.tableView.reloadData()
     }
     
     func layout() {
