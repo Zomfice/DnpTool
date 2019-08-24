@@ -6,6 +6,10 @@
 //  Copyright (c) 2019 songchaofeng6@hotmail.com. All rights reserved.
 //
 
+/*
+ 需要完善：通知在异步处理,通知在单独线程处理,单独开辟一个线程处理通知的发送和接收
+ */
+
 import UIKit
 import DnpTool
 import ZLNetworkComponent
@@ -16,13 +20,14 @@ class ViewController: UIViewController {
         
         //let timer = Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(request), userInfo: nil, repeats: true)
         //RunLoop.current.add(timer, forMode: .common)
-        request()
+
+        //request()
     }
     
     @objc func request() {
         let path = "http://meizi.leanapp.cn/category/All/page/1"
-        DnpTool.dnpLogDataFormat(url: path, method: "POST", headers: "请求头", body: "请求参数", response: nil, error: nil)
-        return
+        //DnpTool.dnpLogDataFormat(url: path, method: "POST", headers: "请求头", body: "请求参数", response: nil, error: nil)
+        
         ZLNetWork.request(requestType: .get, path: path, parameters: nil, netConfig: nil, progressBlock: nil, dataTaskBlock: nil, serviceResponse: nil) { (response, error) in
             if let m_response = response{
                 //print("----\(m_response)")

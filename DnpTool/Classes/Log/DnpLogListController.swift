@@ -56,7 +56,7 @@ class DnpLogListController: DnpToolBaseController {
         logmodel.url = self.dealLog(content: content)
         logmodel.response = content
         logmodel.success = !content.contains("Error Domain")
-        if DnpLogListController.dataArray.count > 3 {
+        if DnpLogListController.dataArray.count > 99 {
             DnpLogListController.dataArray.removeFirst()
         }
         DnpLogListController.dataArray.append(logmodel)
