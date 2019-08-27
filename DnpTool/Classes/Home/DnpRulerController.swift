@@ -12,6 +12,7 @@ class DnpRulerController: DnpToolSwitchController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.descTitle = "开启坐标尺"
+        UserDefaults.standard.set(DnpRulerManager.shareInstance.isShowing, forKey: "\(DnpRulerController.self)")
         if UserDefaults.standard.bool(forKey: "\(DnpRulerController.self)") {
             self.switchView.isOn = UserDefaults.standard.bool(forKey: "\(DnpRulerController.self)")
         }
@@ -19,7 +20,11 @@ class DnpRulerController: DnpToolSwitchController {
     
     override func switchAction(sender: UISwitch) {
         UserDefaults.standard.set(sender.isOn, forKey: "\(DnpRulerController.self)")
-        
+        if sender.isOn{
+            DnpRulerManager.shareInstance.show()
+        }else{
+            DnpRulerManager.shareInstance.hidden()
+        }
         DnpToolHomeWindow.shareInstance.hide()
     }
 }

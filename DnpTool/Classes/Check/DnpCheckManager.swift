@@ -16,6 +16,10 @@ public class DnpCheckManager: NSObject {
         NotificationCenter.default.addObserver(self, selector: #selector(closePlugin(notification:)), name: NSNotification.Name(rawValue: "\(DnpCheckView.self)"), object: nil)
     }
     
+    var isShowing : Bool {
+        return !(self.checkView?.isHidden ?? true)
+    }
+    
     public func show() {
         if self.checkView == nil {
             self.checkView = DnpCheckView()

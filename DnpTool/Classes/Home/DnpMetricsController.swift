@@ -12,6 +12,7 @@ class DnpMetricsController: DnpToolSwitchController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.descTitle = "开启元素线"
+        UserDefaults.standard.set(MetricsConfig.shared.enable, forKey: "\(DnpMetricsController.self)")
         if UserDefaults.standard.bool(forKey: "\(DnpMetricsController.self)") {
             self.switchView.isOn = UserDefaults.standard.bool(forKey: "\(DnpMetricsController.self)")
         }

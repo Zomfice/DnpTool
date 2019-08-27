@@ -12,6 +12,7 @@ class DnpCheckController: DnpToolSwitchController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.descTitle = "开启检测元素"
+        UserDefaults.standard.set(DnpCheckManager.shareInstance.isShowing, forKey: "\(DnpCheckController.self)")
         if UserDefaults.standard.bool(forKey: "\(DnpCheckController.self)") {
             self.switchView.isOn = UserDefaults.standard.bool(forKey: "\(DnpCheckController.self)")
         }
