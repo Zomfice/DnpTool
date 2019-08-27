@@ -246,7 +246,7 @@ class DnpCheckView: UIView {
     }
     
     @objc func closeBtnClicked(sender: UIButton) {
-        NotificationCenter.default.post(name: NSNotification.Name(rawValue: CloseNotification), object: nil, userInfo: nil)
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "\(DnpCheckView.self)"), object: nil, userInfo: nil)
     }
     
     func show() {
