@@ -19,13 +19,11 @@ class DnpCheckView: UIView {
     var top : CGFloat = 0
     var arrViewHit = [UIView]()
     
-
-    override init(frame: CGRect) {
+    init() {
         let m_frame = CGRect(x: screenwidth/2 - viewCheckSize/2, y: screenheight/2 - viewCheckSize/2, width: viewCheckSize, height: viewCheckSize)
         super.init(frame: m_frame)
-        self.frame = m_frame
         self.backgroundColor = UIColor.clear
-        self.layer.zPosition = CGFloat.greatestFiniteMagnitude
+        self.layer.zPosition = CGFloat(FLT_MAX)//CGFloat.greatestFiniteMagnitude
         let imageView = UIImageView(frame: self.bounds)
         imageView.image = UIImage.imageName(name: "dnptool_visual")
         self.addSubview(imageView)
@@ -34,13 +32,13 @@ class DnpCheckView: UIView {
         viewBound.layer.masksToBounds = true
         viewBound.layer.borderWidth = 2
         viewBound.layer.borderColor = UIColor.dnp_colorWithHex(hex: 0xCC3A4B, alpha: 1).cgColor
-        viewBound.layer.zPosition = CGFloat.greatestFiniteMagnitude
-        
-        viewInfoWindow = DnpVisualWindow(frame: CGRect(x: screenScale(x: 30), y: screenheight - screenScale(x: 210) - screenScale(x: 15) - bottomSafeArea, width: screenwidth - 2*screenScale(x: 30), height: screenScale(x: 210)))
+        viewBound.layer.zPosition = CGFloat(FLT_MAX)
+        //screenheight - screenScale(x: 210) - screenScale(x: 15) - bottomSafeArea
+        viewInfoWindow = DnpVisualWindow(frame: CGRect(x: screenScale(x: 30), y: statusbarHeight, width: screenwidth - 2*screenScale(x: 30), height: screenScale(x: 210)))
         
         viewInfoWindow.makeKeyAndVisible()
         viewInfoWindow.isHidden = true
-        viewInfoWindow.backgroundColor = UIColor.white.withAlphaComponent(0.4)
+        viewInfoWindow.backgroundColor = UIColor.white.withAlphaComponent(0.8)
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
             self.window?.makeKeyAndVisible()
         }
@@ -60,7 +58,8 @@ class DnpCheckView: UIView {
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        let touch = touches.first
+        let m_touches = NSSet(set: touches)
+        let touch = m_touches.anyObject() as? UITouch
         let point = touch?.location(in: self)
 
         left = point?.x ?? 0
@@ -75,7 +74,8 @@ class DnpCheckView: UIView {
     }
     
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
-        let touch = touches.first
+        let m_touches = NSSet(set: touches)
+        let touch = m_touches.anyObject() as? UITouch
         let point = touch?.location(in: self.window) ?? .zero
         self.frame = CGRect(x: point.x - left, y: point.y - top, width: self.frame.size.width, height: self.frame.size.height)
         
@@ -114,13 +114,13 @@ class DnpCheckView: UIView {
         }
         var m_point = point
         if m_view.isKind(of: UIScrollView.self),let scrollView = m_view as? UIScrollView{
-            m_point.x += scrollView.contentOffset.x
-            m_point.y += scrollView.contentOffset.y
+            m_point.x = m_point.x + scrollView.contentOffset.x
+            m_point.y = m_point.y + scrollView.contentOffset.y
         }
         if m_view.point(inside: m_point, with: nil),m_view.isHidden == false,m_view.alpha >= 0.01,m_view != viewBound,!m_view.isDescendant(of: self){
             arrViewHit.append(m_view)
             for subView in m_view.subviews{
-                let subPoint = CGPoint(x: point.x - subView.frame.origin.x, y: point.y - subView.frame.origin.y)
+                let subPoint = CGPoint(x: m_point.x - subView.frame.origin.x, y: m_point.y - subView.frame.origin.y)
                 self.hitTest(view: subView, point: subPoint)
             }
         }
@@ -139,7 +139,7 @@ class DnpCheckView: UIView {
         
         if m_view.isKind(of: UILabel.self){
             if let label = m_view as? UILabel{
-                tempString = "\n背景颜色: \(hexFromUIColor(color: label.backgroundColor))" + "字体颜色: \(hexFromUIColor(color: label.textColor))" + "字体大小: \(label.font.pointSize.format())"
+                tempString = "\n背景颜色: \(hexFromUIColor(color: label.backgroundColor))" + "  字体颜色: \(hexFromUIColor(color: label.textColor))" + "  字体大小: \(label.font.pointSize.format())"
                 showString.append(tempString)
             }
         }else if m_view.isKind(of: UIView.self){
@@ -151,7 +151,7 @@ class DnpCheckView: UIView {
         let style = NSMutableParagraphStyle()
         style.lineSpacing = screenScale(x: 12)
         style.lineBreakMode = .byTruncatingTail
-        let fontColor = UIColor.rgb(red: 250, green: 75, blue: 75, alpha: 1)
+        let fontColor = UIColor.magenta//UIColor.rgb(red: 250, green: 75, blue: 75, alpha: 1)
         let attrString = NSMutableAttributedString(string: string)
         attrString.addAttributes([NSMutableAttributedString.Key.paragraphStyle : style,
                                   NSMutableAttributedString.Key.font : UIFont.systemFont(ofSize: screenScale(x: 24)),

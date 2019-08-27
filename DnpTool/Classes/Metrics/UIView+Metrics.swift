@@ -11,9 +11,7 @@ import Foundation
 
 extension UIView: SelfAware{
     public static func awake() {
-        #if DEBUG
         swizzleMethod
-        #endif
     }
     private static let swizzleMethod: Void = {
         UIView.zom_swizzleInstanceMethodWithOriginSel(oriSel: #selector(layoutSubviews), swiSel: #selector(zom_layoutSubviews))
@@ -34,13 +32,13 @@ extension UIView: SelfAware{
     func showMetrics() {
         if !self.shouldShowMetricsView(){
             self.hideMetricsRecursive()
-            return;
+            return
         }
         
         var metricsView = self.getMetricsView()
         if metricsView == nil {
             metricsView = MetricsView(frame: self.bounds)
-            metricsView?.tag = MetricsView.self.hash() + "\(self)".hash
+            metricsView?.tag = MetricsView.self.hash() + self.hash
             metricsView?.isUserInteractionEnabled = false
             self.addSubview(metricsView!)
         }
@@ -89,7 +87,7 @@ extension UIView: SelfAware{
     }
     
     func getMetricsView() -> MetricsView? {
-        let tag = MetricsView.self.hash() + "\(self)".hash
+        let tag = MetricsView.self.hash() + self.hash
         return self.viewWithTag(tag) as? MetricsView
     }
     
