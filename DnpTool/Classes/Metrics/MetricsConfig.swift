@@ -12,7 +12,7 @@ import UIKit
 /// 给项目中的UIView类添加红色的元素线
 public class MetricsConfig: NSObject {
     public static let shared = MetricsConfig()
-    public var borderColor = UIColor.red
+    public var borderColor = UIColor.magenta
     public var borderWidth: CGFloat = 1
     internal var enable: Bool = false
     public var ignoreSystemView: Bool = true

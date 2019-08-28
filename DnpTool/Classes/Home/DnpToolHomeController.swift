@@ -36,13 +36,14 @@ class DnpToolHomeController: DnpToolBaseController {
                 ["title": "Log","icon":"dnptool_img","jump":"DnpLogListController"],
                 ["title": "元素","icon":"dnptool_img","jump":"DnpMetricsController"],
                 ["title": "控件","icon":"dnptool_img","jump":"DnpCheckController"],
-                ["title": "标尺","icon":"dnptool_img","jump":"DnpRulerController"]
+                ["title": "标尺","icon":"dnptool_img","jump":"DnpRulerController"],
+                ["title": "FPS","icon":"dnptool_img","jump":"DnpFPSController"]
             ]
         ],
         [
             "head":"组件",
             "data":[
-                ["title": "开发中","icon":"dnptool_img","jump":""],
+                ["title": "内存泄露","icon":"dnptool_img","jump":""],
                 ["title": "开发中","icon":"dnptool_img","jump":""],
                 ["title": "开发中","icon":"dnptool_img","jump":""]
             ]

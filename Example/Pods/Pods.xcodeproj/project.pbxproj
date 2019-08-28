@@ -97,6 +97,10 @@
 		E261B82A0EEFE0EA897EA1A36C69C1CE /* AFImageDownloader.h in Headers */ = {isa = PBXBuildFile; fileRef = 237CF2C4723FA879BCC355118805968E /* AFImageDownloader.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E3CD8C631E7A42A233DC58A408689FC0 /* AFNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4380AEF80628ADE3D82E532B4AC4E6E9 /* AFNetworking.framework */; };
 		EC106AEDF219A4F54964EBDFCB241E57 /* DnpTool.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C2AD5A9FD07189D94FF9915C3B1A9D8A /* DnpTool.bundle */; };
+		EF2437C3231626EE002A023C /* DnpFpsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2437C2231626EE002A023C /* DnpFpsManager.swift */; };
+		EF2437C52316273C002A023C /* DnpFpsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2437C42316273C002A023C /* DnpFpsView.swift */; };
+		EF2437C723162888002A023C /* DnpFPSController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2437C623162888002A023C /* DnpFPSController.swift */; };
+		EF2437C9231630A7002A023C /* DnpFPSLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2437C8231630A7002A023C /* DnpFPSLabel.swift */; };
 		EF26DD172314D9060083A5EA /* DnpRulerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF26DD162314D9060083A5EA /* DnpRulerManager.swift */; };
 		EF26DD192314D9230083A5EA /* DnpRulerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF26DD182314D9230083A5EA /* DnpRulerView.swift */; };
 		EF53EAB52310E9DE00254E2F /* DnpDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF53EAB42310E9DE00254E2F /* DnpDescription.swift */; };
@@ -281,6 +285,10 @@
 		E94A386F898AF88E812EC4BCE290FABB /* MetricsConfig.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MetricsConfig.swift; path = DnpTool/Classes/Metrics/MetricsConfig.swift; sourceTree = "<group>"; };
 		E9F01B49CDB091E2CD0CF71D47975DDF /* ZLNetworkComponent.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ZLNetworkComponent.xcconfig; sourceTree = "<group>"; };
 		E9FE4B427A66086893AF372C8E2D736B /* AFHTTPSessionManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFHTTPSessionManager.h; path = AFNetworking/AFHTTPSessionManager.h; sourceTree = "<group>"; };
+		EF2437C2231626EE002A023C /* DnpFpsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DnpFpsManager.swift; sourceTree = "<group>"; };
+		EF2437C42316273C002A023C /* DnpFpsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DnpFpsView.swift; sourceTree = "<group>"; };
+		EF2437C623162888002A023C /* DnpFPSController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DnpFPSController.swift; path = DnpTool/Classes/Home/DnpFPSController.swift; sourceTree = "<group>"; };
+		EF2437C8231630A7002A023C /* DnpFPSLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DnpFPSLabel.swift; sourceTree = "<group>"; };
 		EF26DD162314D9060083A5EA /* DnpRulerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DnpRulerManager.swift; sourceTree = "<group>"; };
 		EF26DD182314D9230083A5EA /* DnpRulerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DnpRulerView.swift; sourceTree = "<group>"; };
 		EF53EAB42310E9DE00254E2F /* DnpDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DnpDescription.swift; path = DnpTool/Classes/Common/DnpDescription.swift; sourceTree = "<group>"; };
@@ -550,6 +558,7 @@
 		CBB1EC02F75C25B25407A3C164F93CE8 /* DnpTool */ = {
 			isa = PBXGroup;
 			children = (
+				EF2437C1231626D3002A023C /* FPS */,
 				EF26DD152314D8CB0083A5EA /* Ruler */,
 				530552A9FB2C6E7F0BA7316EABEABB63 /* Check */,
 				3910D7411B7660B5E29181271DB4F690 /* Common */,
@@ -603,6 +612,7 @@
 			isa = PBXGroup;
 			children = (
 				BB2A38AA8847435F4B5AD406EF57B073 /* DnpCheckController.swift */,
+				EF2437C623162888002A023C /* DnpFPSController.swift */,
 				8265CCFE8141941A20AA9B1CD62CD73C /* DnpMetricsController.swift */,
 				138EC9DE3BE54DC8077D01D23D89AA75 /* DnpRulerController.swift */,
 				626E9B72E2FA501A3F1A569991BCDEA8 /* DnpToolEnterView.swift */,
@@ -628,6 +638,17 @@
 				717472AAE35EB9CA459026A50FB2E2FB /* Support Files */,
 			);
 			path = ZLNetworkComponent;
+			sourceTree = "<group>";
+		};
+		EF2437C1231626D3002A023C /* FPS */ = {
+			isa = PBXGroup;
+			children = (
+				EF2437C2231626EE002A023C /* DnpFpsManager.swift */,
+				EF2437C42316273C002A023C /* DnpFpsView.swift */,
+				EF2437C8231630A7002A023C /* DnpFPSLabel.swift */,
+			);
+			name = FPS;
+			path = DnpTool/Classes/FPS;
 			sourceTree = "<group>";
 		};
 		EF26DD152314D8CB0083A5EA /* Ruler */ = {
@@ -1038,6 +1059,7 @@
 				799D3DF6B6B4610CDB48485CD9AE4BD7 /* DnpTool-dummy.m in Sources */,
 				B5E2A97637EC553B1FAA1A1DF0B6C49F /* DnpToolBaseController.swift in Sources */,
 				C6840526401DD49BD7959E46D5A3A4FE /* DnpToolCommon.swift in Sources */,
+				EF2437C3231626EE002A023C /* DnpFpsManager.swift in Sources */,
 				EFDF72C6230E7682009D9B2C /* DnpToolLogController.swift in Sources */,
 				EF26DD192314D9230083A5EA /* DnpRulerView.swift in Sources */,
 				1D279FC46934281B24A5DC57B8F9B342 /* DnpToolEnterView.swift in Sources */,
@@ -1049,7 +1071,10 @@
 				EF26DD172314D9060083A5EA /* DnpRulerManager.swift in Sources */,
 				3B7BBC9628BC760EFF0ACB47F45F1BBF /* DnpToolSwitchController.swift in Sources */,
 				19B85159A07E5A08C11E82C21A6D3C37 /* DnpVisualWindow.swift in Sources */,
+				EF2437C9231630A7002A023C /* DnpFPSLabel.swift in Sources */,
+				EF2437C52316273C002A023C /* DnpFpsView.swift in Sources */,
 				EF59E6C2230FD46200DDA256 /* DnpLogDetailController.swift in Sources */,
+				EF2437C723162888002A023C /* DnpFPSController.swift in Sources */,
 				AE066BC31178AB2F5088946FB6055A16 /* LoadProtocol.swift in Sources */,
 				920FD9B9623B777EEFA5FE089646FEBE /* MetricsConfig.swift in Sources */,
 				26D2D8E853368BA52A3D275C51903AD5 /* MetricsView.swift in Sources */,
