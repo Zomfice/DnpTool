@@ -22,7 +22,7 @@ pod 'DnpTool'
 
 ## Author
 
-songchaofeng6@hotmail.com, songchaofeng6@hotmail.com
+Zomfice@gmail.com
 
 ## License
 
