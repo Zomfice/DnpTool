@@ -12,6 +12,11 @@ import UIKit
     private var enterView : DnpToolEnterView!
     private var startPlugins = [String]()
     
+    override init() {
+        super.init()
+        self.initconfig()
+    }
+    
     @objc public func show() {
         self.initEnter()
     }
@@ -23,7 +28,6 @@ import UIKit
     internal func initEnter() {
         enterView = DnpToolEnterView()
         enterView.makeKeyAndVisible()
-        initconfig()
     }
     
     internal func initconfig() {
