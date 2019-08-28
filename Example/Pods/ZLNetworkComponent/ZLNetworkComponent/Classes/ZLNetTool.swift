@@ -89,6 +89,18 @@ extension String {
         return String(format: hash as String)
     }
     
+    static func jsonToString(dic : [String: Any]?) -> String{
+        guard let dict = dic else {
+            return ""
+        }
+        if JSONSerialization.isValidJSONObject(dict){
+            let data = try? JSONSerialization.data(withJSONObject: dict, options: .prettyPrinted)
+            if let m_data = data,let encodeString = String(data: m_data, encoding: .utf8){
+                return encodeString.replacingOccurrences(of: "\\/", with: "/")
+            }
+        }
+        return ""
+    }
 }
 
 

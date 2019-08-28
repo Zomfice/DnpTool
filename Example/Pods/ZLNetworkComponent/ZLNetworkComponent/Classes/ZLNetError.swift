@@ -60,6 +60,11 @@ public class ZLNetError: NSError {
         }
     }
     
+    public init(error: NSError?) {
+        super.init(domain: error?.domain ?? "", code: error?.code ?? 0 , userInfo: error?.userInfo ?? [:])
+        self.error = error
+    }
+    
     public init(domain: String?, code: ZLNetStatusCode, errorMessage userInfo: String?) {
         var m_domain : String = ""
         if let o_domain = domain {

@@ -14,25 +14,33 @@ PODS:
   - AFNetworking/Serialization (3.2.1)
   - AFNetworking/UIKit (3.2.1):
     - AFNetworking/NSURLSession
-  - DnpTool (1.1.1):
-    - DnpTool/Check (= 1.1.1)
-    - DnpTool/Common (= 1.1.1)
-    - DnpTool/Home (= 1.1.1)
-    - DnpTool/Log (= 1.1.1)
-    - DnpTool/Metrics (= 1.1.1)
-  - DnpTool/Check (1.1.1):
+  - DnpTool (1.2.5):
+    - DnpTool/Check (= 1.2.5)
+    - DnpTool/Common (= 1.2.5)
+    - DnpTool/FPS (= 1.2.5)
+    - DnpTool/Home (= 1.2.5)
+    - DnpTool/Log (= 1.2.5)
+    - DnpTool/Metrics (= 1.2.5)
+    - DnpTool/Ruler (= 1.2.5)
+  - DnpTool/Check (1.2.5):
     - DnpTool/Common
-  - DnpTool/Common (1.1.1)
-  - DnpTool/Home (1.1.1):
+  - DnpTool/Common (1.2.5)
+  - DnpTool/FPS (1.2.5):
+    - DnpTool/Common
+  - DnpTool/Home (1.2.5):
     - DnpTool/Check
     - DnpTool/Common
+    - DnpTool/FPS
     - DnpTool/Log
     - DnpTool/Metrics
-  - DnpTool/Log (1.1.1):
+    - DnpTool/Ruler
+  - DnpTool/Log (1.2.5):
     - DnpTool/Common
-  - DnpTool/Metrics (1.1.1):
+  - DnpTool/Metrics (1.2.5):
     - DnpTool/Common
-  - ZLNetworkComponent (1.0.4):
+  - DnpTool/Ruler (1.2.5):
+    - DnpTool/Common
+  - ZLNetworkComponent (1.0.6):
     - AFNetworking
 
 DEPENDENCIES:
@@ -51,8 +59,8 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
-  DnpTool: 78714fa5c2e6a67459395a5908d8d996f2b0ef21
-  ZLNetworkComponent: 10e1b9f3f447d4bf2826ee59704a1778fc08db02
+  DnpTool: d1560d3a6205036d926816ba1974f172dd677837
+  ZLNetworkComponent: f912a428da159af154b8d9dad3a87f79ab55d519
 
 PODFILE CHECKSUM: 29c956630a2f2341c1e3ca478c51711db09498fb
 

@@ -153,9 +153,9 @@ public typealias ZLCompletedHandle = (_ success: Bool,_ error: ZLNetError?) -> V
                 }
             }) { (response, error) in
                 if let m_netConfig = netConfigs,m_netConfig.isNeedServiceResponse == true {
-                    ZLNetWork.shared.operateResponseResult(netConfig: m_netConfig, response: response, urlPath: requestPath, parameters: m_parameters, error: error, serviceResponseBlock: serviceResponse, responseBlock: responseBlock)
+                    ZLNetWork.shared.operateResponseResult(method: .get,netConfig: m_netConfig, response: response, urlPath: requestPath, parameters: m_parameters, error: error, serviceResponseBlock: serviceResponse, responseBlock: responseBlock)
                 }else{
-                    ZLNetWork.print_response_log(netConfig: netConfigs, urlPath: requestPath, parameters: m_parameters, response: response, error: error)
+                    ZLNetWork.print_response_log(method: .get,netConfig: netConfigs, urlPath: requestPath, parameters: m_parameters, response: response, error: error)
                     responseBlock(response,error)
                 }
             }
@@ -168,9 +168,9 @@ public typealias ZLCompletedHandle = (_ success: Bool,_ error: ZLNetError?) -> V
                 }
             }) { (response, error) in
                 if let m_netConfig = netConfigs,m_netConfig.isNeedServiceResponse == true {
-                    ZLNetWork.shared.operateResponseResult(netConfig: m_netConfig, response: response, urlPath: requestPath, parameters: m_parameters, error: error, serviceResponseBlock: serviceResponse, responseBlock: responseBlock)
+                    ZLNetWork.shared.operateResponseResult(method: .post,netConfig: m_netConfig, response: response, urlPath: requestPath, parameters: m_parameters, error: error, serviceResponseBlock: serviceResponse, responseBlock: responseBlock)
                 }else{
-                    ZLNetWork.print_response_log(netConfig: netConfigs, urlPath: requestPath, parameters: m_parameters, response: response, error: error)
+                    ZLNetWork.print_response_log(method: .post,netConfig: netConfigs, urlPath: requestPath, parameters: m_parameters, response: response, error: error)
                     responseBlock(response,error)
                 }
             }
@@ -184,9 +184,9 @@ public typealias ZLCompletedHandle = (_ success: Bool,_ error: ZLNetError?) -> V
     }
     
     // MARK: 处理Response
-    func operateResponseResult(netConfig: ZLNetConfig?,response: Any?,urlPath: String,parameters: Any?,error: NSError?,serviceResponseBlock: ServiceResponseBlock?,responseBlock: @escaping ResponseBlock) {
+    func operateResponseResult(method: ZLNetworkType,netConfig: ZLNetConfig?,response: Any?,urlPath: String,parameters: Any?,error: NSError?,serviceResponseBlock: ServiceResponseBlock?,responseBlock: @escaping ResponseBlock) {
         /// 是否打印接口请求数据
-        ZLNetWork.print_response_log(netConfig: netConfig, urlPath: urlPath, parameters: parameters, response: response, error: error)
+        ZLNetWork.print_response_log(method: method,netConfig: netConfig, urlPath: urlPath, parameters: parameters, response: response, error: error)
         
         if let m_response = response {
             /// 处理请求得到的数据为ZLServiceResponse对象
@@ -265,7 +265,7 @@ public typealias ZLCompletedHandle = (_ success: Bool,_ error: ZLNetError?) -> V
 
         }, failure: { (dataTask, error) in
             
-            responseBlock(nil,nil)
+            responseBlock(nil,ZLNetError(error: error as NSError))
         })
     }
     
@@ -282,13 +282,13 @@ public typealias ZLCompletedHandle = (_ success: Bool,_ error: ZLNetError?) -> V
             
         }, failure: { (dataTask, error) in
             
-            responseBlock(nil,nil)
+            responseBlock(nil,ZLNetError(error: error as NSError))
             
         })
     }
     
     // MARK: 打印数据log
-    private static func print_response_log(netConfig: ZLNetConfig?,urlPath: String,parameters: Any?,response: Any?,error: NSError?) {
+    private static func print_response_log(method: ZLNetworkType,netConfig: ZLNetConfig?,urlPath: String,parameters: Any?,response: Any?,error: NSError?) {
         if let m_netConfig = netConfig,m_netConfig.isNeedLog == true {
             /*
              let log = "********************************** API:request **********************************\n\n"
@@ -310,6 +310,40 @@ public typealias ZLCompletedHandle = (_ success: Bool,_ error: ZLNetError?) -> V
             log = log + "------api error:\(String(describing: error))\n\n"
             log = log + "🍀🍀🍀🍀🍀🍀🍀🍀🍀🍀🍀🍀🍀🍀🍀🍀🍀🍀🍀🍀🍀🍀🍀🍀🍀🍀🍀🍀🍀🍀🍀🍀🍀🍀🍀\n"
             print(log)
+            
+            #if DEBUG
+            var headers = "nil"
+            if let m_header = ZLNetWork.sharedManager?.requestSerializer.httpRequestHeaders{
+                headers = String.jsonToString(dic: m_header)
+            }
+            var methodstr = "unknown"
+            switch method {
+            case .get:
+                methodstr = "GET"
+            case .post:
+                methodstr = "POST"
+            default:
+                break
+            }
+            var param = "nil"
+            if let m_param = parameters as? [String: Any]{
+                param = String.jsonToString(dic: m_param)
+            }
+            var result = "nil"
+            if let e = error {
+                result = "{\n\(e)\n}"
+            }else if let m_response = response as? [String:Any]{
+                result =  m_response.customDescription(level: 0)
+            }else{
+                result = "\(response ?? "{\n\n}")"
+            }
+            let netlog = "URL: " + "\(urlPath)" + "\n\n"
+                + "Method: " + "\(methodstr)" + "\n\n"
+                + "Headers: " + "\(headers)" + "\n\n"
+                + "RequestBody: " + "\(param)" + "\n\n"
+                + "Response: " + "\(result)" + "\n\n"
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "DnpLogNotification"), object: nil,userInfo: ["DnpLog":netlog])
+            #endif
         }
     }
     

@@ -1,7 +1,7 @@
 {
   "name": "DnpTool",
-  "version": "1.1.1",
-  "summary": "A short description of DnpTool.",
+  "version": "1.2.5",
+  "summary": "A Debug Tool for develop in swift.",
   "description": "TODO: Add long description of the pod here.",
   "homepage": "https://github.com/Zomfice/DnpTool",
   "license": {
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/Zomfice/DnpTool.git",
-    "tag": "1.1.1"
+    "tag": "1.2.5"
   },
   "platforms": {
     "ios": "8.0"
@@ -44,6 +44,12 @@
         ],
         "DnpTool/Log": [
 
+        ],
+        "DnpTool/Ruler": [
+
+        ],
+        "DnpTool/FPS": [
+
         ]
       }
     },
@@ -68,6 +74,24 @@
     {
       "name": "Log",
       "source_files": "DnpTool/Classes/Log/**/*",
+      "dependencies": {
+        "DnpTool/Common": [
+
+        ]
+      }
+    },
+    {
+      "name": "Ruler",
+      "source_files": "DnpTool/Classes/Ruler/**/*",
+      "dependencies": {
+        "DnpTool/Common": [
+
+        ]
+      }
+    },
+    {
+      "name": "FPS",
+      "source_files": "DnpTool/Classes/FPS/**/*",
       "dependencies": {
         "DnpTool/Common": [
 

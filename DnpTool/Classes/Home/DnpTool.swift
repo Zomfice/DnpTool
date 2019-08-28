@@ -69,7 +69,9 @@ import UIKit
             p_body = "{\n\(n_body)\n}"
         }
         var p_response = "{\n\n}"
-        if let m_response = response as? [String: Any]{
+        if let e = error{
+            p_response = "{\n\(e)\n}"
+        }else if let m_response = response as? [String: Any]{
             p_response = m_response.customDescription(level: 0)
         }else if let n_response = response{
             p_response = "{\n\(n_response)\n}"
