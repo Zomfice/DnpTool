@@ -9,7 +9,8 @@ import UIKit
 
 class DnpToolHomeWindow: UIWindow {
     
-    var nav : UINavigationController?
+    private var nav : UINavigationController?
+    private var homeVc : DnpToolHomeController?
     
     public static let shareInstance = DnpToolHomeWindow(frame: CGRect(x: 0, y: 0, width: screenwidth, height: screenheight))
 
@@ -26,9 +27,10 @@ class DnpToolHomeWindow: UIWindow {
     }
     
     func show() {
-        let vc = DnpToolHomeController()
-        self.setRootVc(rootVc: vc)
+        self.homeVc = DnpToolHomeController()
+        self.setRootVc(rootVc: self.homeVc)
         self.isHidden = false
+        openModule()
     }
     
     func hide() {
@@ -51,6 +53,14 @@ class DnpToolHomeWindow: UIWindow {
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    
+    internal func openModule() {
+        if UserDefaults.standard.bool(forKey: DnpOpenLogModule) {
+            let logvc = DnpLogListController()
+            self.homeVc?.navigationController?.pushViewController(logvc, animated: false)
+        }
     }
     
 }

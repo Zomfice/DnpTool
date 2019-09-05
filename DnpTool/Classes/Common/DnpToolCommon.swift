@@ -147,6 +147,22 @@ extension NSString{
     }
 }
 
+extension Date{
+    /// 当前事件戳
+    static func timeInterval() -> TimeInterval{
+        let date = NSDate(timeIntervalSinceNow: 0)
+        let time : TimeInterval = date.timeIntervalSince1970
+        return time
+    }
+    /// 当前日期
+    static func currentDate(time: TimeInterval)-> String{
+        let date = Date(timeIntervalSince1970: time)
+        let formatter = DateFormatter()
+        formatter.dateFormat = "HH:mm:ss"
+        return formatter.string(from: date)
+    }
+}
+
 // MARK: TableView`s reuseIdentifier
 protocol ReuseViewProtocol: NSObjectProtocol {
     static var reuseIdentifier: String { get }
@@ -163,6 +179,8 @@ public let CloseNotification = "ClosePluginNotification"
 
 /// Use for Log Notification Name
 public let DnpLogNotification = "DnpLogNotification"
+/// 快速开启Log
+internal let DnpOpenLogModule = "DnpLogOpenMoudle"
 
 /*
  Use for Log Notification userInfo key

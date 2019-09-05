@@ -15,7 +15,7 @@ class DnpToolEnterView: UIWindow {
     
     init() {
         kEntryViewSize = screenScale(x: 116)
-        let rect = CGRect(x: 0, y: screenheight * 0.7 , width: kEntryViewSize, height: kEntryViewSize)
+        let rect = CGRect(x: 0, y: screenheight * 0.8 , width: kEntryViewSize, height: kEntryViewSize)
         super.init(frame: rect)
         self.backgroundColor = UIColor.clear
         

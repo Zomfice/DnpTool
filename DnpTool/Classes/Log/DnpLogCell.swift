@@ -19,6 +19,15 @@ class DnpLogCell: UITableViewCell {
         return m_title
     }()
     
+    lazy var date: UILabel = {
+        let m_date = UILabel(frame: .zero)
+        m_date.font = UIFont.systemFont(ofSize: 10)
+        m_date.textColor = UIColor(red: 100/255.0, green: 100/255.0, blue: 100/255.0, alpha: 1)
+        m_date.numberOfLines = 1
+        m_date.textAlignment = .right
+        return m_date
+    }()
+    
     lazy var line: UIView = {
         let m_line = UIView()
         m_line.backgroundColor = UIColor(red: 245/255.0, green: 245/255.0, blue: 245/255.0, alpha: 1)
@@ -36,8 +45,14 @@ class DnpLogCell: UITableViewCell {
         self.title.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint(item: self.title, attribute: .left, relatedBy: .equal, toItem: self.contentView, attribute: .left, multiplier: 1.0, constant: 10).isActive = true
         NSLayoutConstraint(item: self.title, attribute: .right, relatedBy: .equal, toItem: self.contentView, attribute: .right, multiplier: 1.0, constant: -10).isActive = true
-        NSLayoutConstraint(item: self.title, attribute: .top, relatedBy: .equal, toItem: self.contentView, attribute: .top, multiplier: 1.0, constant: 10).isActive = true
-        NSLayoutConstraint(item: self.title, attribute: .bottom, relatedBy: .equal, toItem: self.contentView, attribute: .bottom, multiplier: 1.0, constant: -10).isActive = true
+        NSLayoutConstraint(item: self.title, attribute: .top, relatedBy: .equal, toItem: self.contentView, attribute: .top, multiplier: 1.0, constant: 8).isActive = true
+        //NSLayoutConstraint(item: self.title, attribute: .bottom, relatedBy: .equal, toItem: self.contentView, attribute: .bottom, multiplier: 1.0, constant: -15).isActive = true
+        
+        self.contentView.addSubview(self.date)
+        self.date.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint(item: self.date, attribute: .top, relatedBy: .equal, toItem: self.title, attribute: .bottom, multiplier: 1.0, constant: 5).isActive = true
+        NSLayoutConstraint(item: self.date, attribute: .left, relatedBy: .equal, toItem: self.title, attribute: .left, multiplier: 1.0, constant: 0).isActive = true
+        NSLayoutConstraint(item: self.date, attribute: .bottom, relatedBy: .equal, toItem: self.contentView, attribute: .bottom, multiplier: 1.0, constant: -5).isActive = true
         
         self.contentView.addSubview(self.line)
         self.line.translatesAutoresizingMaskIntoConstraints = false

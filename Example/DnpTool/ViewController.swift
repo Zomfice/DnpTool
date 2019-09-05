@@ -20,9 +20,10 @@ class ViewController: UIViewController {
         
         //let timer = Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(request), userInfo: nil, repeats: true)
         //RunLoop.current.add(timer, forMode: .common)
-
-        //request()
+        
+        request()
     }
+
     
     @objc func request() {
         let path = "http://meizi.leanapp.cn/category/All/page/1"

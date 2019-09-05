@@ -11,6 +11,7 @@ class DnpLogModel {
     var url : String = ""
     var success : Bool = true
     var response : String = ""
+    var time : TimeInterval = 0
 }
 
 class DnpLogListController: DnpToolBaseController {
@@ -56,10 +57,11 @@ class DnpLogListController: DnpToolBaseController {
         logmodel.url = self.dealLog(content: content)
         logmodel.response = content
         logmodel.success = !content.contains("Error Domain")
+        logmodel.time = Date.timeInterval()
         if DnpLogListController.dataArray.count > 99 {
             DnpLogListController.dataArray.removeFirst()
         }
-        DnpLogListController.dataArray.append(logmodel)
+        DnpLogListController.dataArray.insert(logmodel, at: 0)
     }
     
     /// 处理Log字符串：获取URL
@@ -102,6 +104,7 @@ extension DnpLogListController: UITableViewDelegate,UITableViewDataSource{
         let logmodel = DnpLogListController.dataArray[indexPath.row]
         let prefix = logmodel.success ? "✅  " : "❌  "
         logcell.title.text = prefix + logmodel.url
+        logcell.date.text = Date.currentDate(time: logmodel.time)
         return logcell
     }
     
