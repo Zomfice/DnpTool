@@ -15,6 +15,8 @@
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
+		EF19D79A232233C10033535A /* SecondController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF19D799232233C10033535A /* SecondController.swift */; };
+		EF19D79C232241960033535A /* ThirdController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF19D79B232241960033535A /* ThirdController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		BBB508075E3E0F518CF78789 /* Pods_DnpTool_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DnpTool_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4922DF8419A1890B746EEA1 /* DnpTool.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = DnpTool.podspec; path = ../DnpTool.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		E03FDEB1929FC4B05719A75B /* Pods-DnpTool_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DnpTool_Example.release.xcconfig"; path = "Target Support Files/Pods-DnpTool_Example/Pods-DnpTool_Example.release.xcconfig"; sourceTree = "<group>"; };
+		EF19D799232233C10033535A /* SecondController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondController.swift; sourceTree = "<group>"; };
+		EF19D79B232241960033535A /* ThirdController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +108,8 @@
 			children = (
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
+				EF19D799232233C10033535A /* SecondController.swift */,
+				EF19D79B232241960033535A /* ThirdController.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
@@ -336,8 +342,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF19D79A232233C10033535A /* SecondController.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				EF19D79C232241960033535A /* ThirdController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

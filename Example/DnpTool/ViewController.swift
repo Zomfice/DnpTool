@@ -21,7 +21,7 @@ class ViewController: UIViewController {
         //let timer = Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(request), userInfo: nil, repeats: true)
         //RunLoop.current.add(timer, forMode: .common)
         
-        request()
+        //request()
     }
 
     
@@ -60,7 +60,19 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         DnpTool.shareInstance.show()
-
+        DnpTool.shareInstance.configModule = {
+            return [
+                ["title": "环境切换","type": "2"],
+                ["title": "模型数据","type": "3"]
+            ]
+        }
+        
+        DnpTool.shareInstance.jumpModule = {
+            return [
+                ["type": "2","class": SecondController.self],
+                ["type": "3","class": ThirdController.self]
+            ]
+        }
     }
     
     

@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'DnpTool'
-  s.version          = '1.2.8'
+  s.version          = '1.2.9'
   s.summary          = 'A Debug Tool for develop in swift.'
 
   s.description      = <<-DESC

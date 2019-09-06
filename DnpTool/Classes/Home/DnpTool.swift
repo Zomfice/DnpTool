@@ -11,6 +11,10 @@ import UIKit
     @objc public static let shareInstance  = DnpTool()
     private var enterView : DnpToolEnterView!
     private var startPlugins = [String]()
+    /// custom module show
+    public var configModule: (() -> [[String:String]] )?
+    /// custom module jump
+    public var jumpModule: (()-> [[String: Any]])?
     
     override init() {
         super.init()
@@ -88,3 +92,14 @@ import UIKit
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: DnpLogNotification), object: nil,userInfo: [DnpLog:netlog])
     }
 }
+
+// MARK: 使用文档
+/*
+ 1. 配置自定义模块
+     DnpTool.shareInstance.configModule = {
+     return [["title": "--","type": "2"]]
+     }
+     DnpTool.shareInstance.jumpModule = {
+     return [["type": "2","class": SecondController.self]]
+     }
+ */

@@ -7,9 +7,22 @@
 
 import UIKit
 
+/*
+ * 规则:
+ * 1. DnpTool内部
+ * jump: 对应控制器类名
+ * type: 用于面板列表点击跳转跳转不同类型,默认为0跳转到内部类名对应控制器,1,关闭面板,jump和type可以空,默认不跳转
+ * 2. DnpTool外部
+ * jump: 传入UIViewController.Type类型的类
+ * type: 自定义跳转类型，type需要保持与配置的Module对应，才可以跳转成功
+ * type: 0,默认内部页面跳转 1, 关闭面板 ....用于自定义跳转
+ * 3. 显示DataSouce: [["title": "关闭面板","icon":"dnptool_img","jump":"","type": "1"]]
+ * 4. 跳转DataSouce: [["type": "2","class": SecondController.self]]
+ */
+
 class DnpToolHomeController: DnpToolBaseController {
     
-    lazy var collectionView : UICollectionView = {
+    private lazy var collectionView : UICollectionView = {
         let flowLayout = UICollectionViewFlowLayout()
         flowLayout.scrollDirection = .vertical
         flowLayout.minimumLineSpacing = 0
@@ -26,9 +39,9 @@ class DnpToolHomeController: DnpToolBaseController {
         return collectView
     }()
     
-    var titleData = [String]()
-    var homeData = [[DnpHomeModel]]()
-    var dataArray = [
+    fileprivate var titleData = [String]()
+    fileprivate var homeData = [[DnpHomeModel]]()
+    fileprivate var dataArray = [
         
         [
             "head":"工具",
@@ -40,14 +53,14 @@ class DnpToolHomeController: DnpToolBaseController {
                 ["title": "FPS","icon":"dnptool_img","jump":"DnpFPSController"]
             ]
         ],
-        [
+        /*[
             "head":"组件",
             "data":[
                 ["title": "内存泄露","icon":"dnptool_img","jump":""],
                 ["title": "开发中","icon":"dnptool_img","jump":""],
                 ["title": "开发中","icon":"dnptool_img","jump":""]
             ]
-        ],
+        ],*/
         [
             "head":"其他",
             "data":[
@@ -66,12 +79,19 @@ class DnpToolHomeController: DnpToolBaseController {
         self.initData()
     }
     
+    /// Jump Action Target
+    ///
+    /// - Parameter indexPath: didselect Item
     func jumpto(indexPath: IndexPath) {
         let homeModel = self.homeData[indexPath.section][indexPath.item]
         if homeModel.type == 1{
             self.close()
             return
+        }else if homeModel.type != 0{
+            self.customModule(homeType: homeModel.type)
+            return
         }
+        
         if homeModel.jump.count > 0,let clsName = Bundle(for: DnpToolCommon.self).infoDictionary!["CFBundleExecutable"] as? String{
             let className = clsName + "." + homeModel.jump
             if let m_className = NSClassFromString(className) as? UIViewController.Type {
@@ -81,28 +101,59 @@ class DnpToolHomeController: DnpToolBaseController {
             }
         }
     }
-    
+    /// 初始化数据
     func initData() {
         for dataDic in self.dataArray {
             self.titleData.append("\(dataDic["head"] ?? "")")
             var tempArr = [DnpHomeModel]()
             if let m_data = dataDic["data"],let data = m_data as? [[String:String]]{
                 for item in data{
-                    let homeModel = DnpHomeModel()
-                    homeModel.title = "\(item["title"] ?? "")"
-                    homeModel.icon = "\(item["icon"] ?? "dnptool_img")"
-                    homeModel.jump = "\(item["jump"] ?? "")"
-                    homeModel.type = Int(item["type"] ?? "0") ?? 0
-                    tempArr.append(homeModel)
+                    tempArr.append(initHomeModel(item: item))
                 }
             }
             if tempArr.count > 0{
                 self.homeData.append(tempArr)
             }
         }
+        
+        if let m_configModule = DnpTool.shareInstance.configModule{
+            var tempArr = [DnpHomeModel]()
+            for item in m_configModule(){
+                tempArr.append(initHomeModel(item: item))
+            }
+            self.homeData[1].append(contentsOf: tempArr)
+        }
+    }
+    /// 解析数据Model
+    fileprivate func initHomeModel(item: [String:String]) -> DnpHomeModel {
+        let homeModel = DnpHomeModel()
+        homeModel.title = "\(item["title"] ?? "")"
+        homeModel.icon = "\(item["icon"] ?? "dnptool_img")"
+        homeModel.jump = "\(item["jump"] ?? "")"
+        homeModel.type = Int(item["type"] ?? "0") ?? 0
+        return homeModel
+    }
+    /// 自定义模块跳转
+    fileprivate func customModule(homeType: Int) {
+        if let m_jumpModule = DnpTool.shareInstance.jumpModule{
+            let jumpArray = m_jumpModule()
+            for dic in jumpArray{
+                var type = 0
+                if let m_type = dic["type"] as? String{
+                    type = Int(m_type) ?? 0
+                }
+                if type != 0,homeType == type{
+                    if let m_class = dic["class"],let classType = m_class as? UIViewController.Type{
+                        let vc = classType.init()
+                        self.navigationController?.pushViewController(vc, animated: true)
+                    }
+                }
+            }
+        }
     }
     
-    func close() {
+    /// 关闭面板
+    fileprivate func close() {
         let alertController = UIAlertController(title: "提示", message: "关闭当前工具面板", preferredStyle: .alert)
         let cancelAction = UIAlertAction(title: "取消", style: .cancel, handler: nil)
         let okAction = UIAlertAction(title: "确定", style: .default) { (action) in
