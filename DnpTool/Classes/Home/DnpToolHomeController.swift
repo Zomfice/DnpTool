@@ -121,7 +121,7 @@ class DnpToolHomeController: DnpToolBaseController {
             for item in m_configModule(){
                 tempArr.append(initHomeModel(item: item))
             }
-            self.homeData[1].append(contentsOf: tempArr)
+            self.homeData[0].append(contentsOf: tempArr)
         }
     }
     /// 解析数据Model

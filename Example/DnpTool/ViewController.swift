@@ -63,14 +63,16 @@ class ViewController: UIViewController {
         DnpTool.shareInstance.configModule = {
             return [
                 ["title": "环境切换","type": "2"],
-                ["title": "模型数据","type": "3"]
+                ["title": "模型数据","type": "3"],
+                ["title": "MOMODA","type": "4"]
             ]
         }
         
         DnpTool.shareInstance.jumpModule = {
             return [
                 ["type": "2","class": SecondController.self],
-                ["type": "3","class": ThirdController.self]
+                ["type": "3","class": ThirdController.self],
+                ["type": "4","class": ThirdController.self]
             ]
         }
     }
