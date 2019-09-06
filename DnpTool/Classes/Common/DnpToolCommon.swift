@@ -110,7 +110,7 @@ extension String{
         if JSONSerialization.isValidJSONObject(dict){
             let data = try? JSONSerialization.data(withJSONObject: dict, options: .prettyPrinted)
             if let m_data = data,let encodeString = String(data: m_data, encoding: .utf8){
-                return encodeString
+                return encodeString.replacingOccurrences(of: "\\/", with: "/")//encodeString
             }
         }
         return ""

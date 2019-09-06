@@ -80,7 +80,8 @@ import UIKit
         if let e = error{
             p_response = "{\n\(e)\n}"
         }else if let m_response = response as? [String: Any]{
-            p_response = m_response.customDescription(level: 0)
+            p_response = String.jsonToString(dic: m_response)
+            //m_response.customDescription(level: 0)
         }else if let n_response = response{
             p_response = "{\n\(n_response)\n}"
         }

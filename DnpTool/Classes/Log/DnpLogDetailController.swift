@@ -14,6 +14,7 @@ class DnpLogDetailController: DnpToolBaseController {
         m_textView.backgroundColor = UIColor.white
         m_textView.translatesAutoresizingMaskIntoConstraints = false
         m_textView.setContentOffset(CGPoint(x: 0, y: -navigationHeight), animated: false)
+        m_textView.delegate = self
         return m_textView
     }()
     
@@ -23,6 +24,9 @@ class DnpLogDetailController: DnpToolBaseController {
         super.viewDidLoad()
         self.layout()
         self.showTextviewContent(content: content)
+        let copy = UIBarButtonItem(title: "复制", style: .plain, target: self, action: #selector(copyAction))
+        let airDrop = UIBarButtonItem(title: "分享", style: .plain, target: self, action: #selector(shareAction))
+        self.navigationItem.rightBarButtonItems = [airDrop,copy]
     }
     
     /// TextView显示
@@ -71,5 +75,22 @@ class DnpLogDetailController: DnpToolBaseController {
         NSLayoutConstraint(item: self.textView, attribute: .bottom, relatedBy: .equal, toItem: self.view, attribute: .bottom, multiplier: 1.0, constant: 0).isActive = true
     }
 
+    @objc func copyAction() {
+        let board = UIPasteboard.general
+        board.string = self.textView.text
+        //self.textView.selectAll(self.textView)
+    }
     
+    @objc func shareAction() {
+        let activity = UIActivityViewController(activityItems: [self.textView.text], applicationActivities: nil)
+        self.present(activity, animated: true, completion: nil)
+    }
+    
+}
+
+extension DnpLogDetailController: UITextViewDelegate{
+    func textViewShouldBeginEditing(_ textView: UITextView) -> Bool {
+        self.textView.inputView = UIView()
+        return true
+    }
 }
