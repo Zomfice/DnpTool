@@ -115,6 +115,19 @@ extension String{
         }
         return ""
     }
+    
+    static func stringToJson(string: String?) -> [String: Any] {
+        guard let str = string else {
+            return [:]
+        }
+        if let data = str.data(using: String.Encoding.utf8){
+            let json = try? JSONSerialization.jsonObject(with: data, options: .mutableContainers)
+            if let dic = json as? [String: Any]{
+                return dic
+            }
+        }
+        return [:]
+    }
 }
 
 // MARK: 几位小数

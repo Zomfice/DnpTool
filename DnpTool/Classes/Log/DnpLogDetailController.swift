@@ -24,9 +24,11 @@ class DnpLogDetailController: DnpToolBaseController {
         super.viewDidLoad()
         self.layout()
         self.showTextviewContent(content: content)
+        
+        let mock = UIBarButtonItem(title: "Mock", style: .plain, target: self, action: #selector(mockAction))
         let copy = UIBarButtonItem(title: "复制", style: .plain, target: self, action: #selector(copyAction))
         let airDrop = UIBarButtonItem(title: "分享", style: .plain, target: self, action: #selector(shareAction))
-        self.navigationItem.rightBarButtonItems = [airDrop,copy]
+        self.navigationItem.rightBarButtonItems = [airDrop,copy,mock]
     }
     
     /// TextView显示
@@ -73,6 +75,21 @@ class DnpLogDetailController: DnpToolBaseController {
         NSLayoutConstraint(item: self.textView, attribute: .right, relatedBy: .equal, toItem: self.view, attribute: .right, multiplier: 1.0, constant: 0).isActive = true
         NSLayoutConstraint(item: self.textView, attribute: .top, relatedBy: .equal, toItem: self.view, attribute: .top, multiplier: 1.0, constant: 0).isActive = true
         NSLayoutConstraint(item: self.textView, attribute: .bottom, relatedBy: .equal, toItem: self.view, attribute: .bottom, multiplier: 1.0, constant: 0).isActive = true
+    }
+    
+    @objc func mockAction() {
+        let arr = content.components(separatedBy: "Response:")
+        var dic = [String:Any]()
+        if let str = arr.last{
+            dic = String.stringToJson(string: str)
+        }
+        var mockDic = [String:Any]()
+        mockDic["params"] = [String:Any]()
+        mockDic["data"] = dic
+        
+        let mockstring = String.jsonToString(dic: mockDic)
+        let activity = UIActivityViewController(activityItems: [mockstring], applicationActivities: nil)
+        self.present(activity, animated: true, completion: nil)
     }
 
     @objc func copyAction() {
