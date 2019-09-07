@@ -20,13 +20,17 @@ import UIKit
         super.init()
         self.initconfig()
     }
-    
+    /// Show DnpTool
     @objc public func show() {
         self.initEnter()
     }
-    
-    internal func hidden() {
+    /// Close DnpTool
+    @objc public func hidden() {
         enterView.isHidden = true
+    }
+    /// Hidden DnpTool
+    @objc public func close() {
+        DnpToolHomeWindow.shareInstance.hide()
     }
     
     internal func initEnter() {
@@ -34,14 +38,14 @@ import UIKit
         enterView.makeKeyAndVisible()
     }
     
+    /// init Log notification
     internal func initconfig() {
-        /// 初始化Log监听
         if UserDefaults.standard.bool(forKey: "\(DnpToolLogController.self)") {
             DnpLogListController.addnotification()
         }
     }
     
-    /// 是否显示DnpLog
+    /// whether show DnpLog
     @objc public static var logisShow : Bool{
         return UserDefaults.standard.bool(forKey: "\(DnpToolLogController.self)")
     }

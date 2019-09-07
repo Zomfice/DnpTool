@@ -14,7 +14,7 @@ class DnpToolEnterView: UIWindow {
     var kEntryViewSize: CGFloat = 0.0
     
     init() {
-        kEntryViewSize = screenScale(x: 116)
+        kEntryViewSize = screenScale(x: 80)//116
         let rect = CGRect(x: 0, y: screenheight * 0.8 , width: kEntryViewSize, height: kEntryViewSize)
         super.init(frame: rect)
         self.backgroundColor = UIColor.clear
@@ -33,7 +33,7 @@ class DnpToolEnterView: UIWindow {
         let entryBtn = UIButton(frame: self.bounds)
         entryBtn.backgroundColor = UIColor.clear
         entryBtn.setImage(UIImage.imageName(name: "dnptool_enter"), for: .normal)
-        entryBtn.layer.cornerRadius = 20
+        //entryBtn.layer.cornerRadius = 20
         entryBtn.addTarget(self, action: #selector(entryClick(sender:)), for: .touchUpInside)
         self.rootViewController?.view.addSubview(entryBtn)
         entryButton = entryBtn
