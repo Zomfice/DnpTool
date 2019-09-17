@@ -14,6 +14,17 @@ import UIKit
 import DnpTool
 import ZLNetworkComponent
 
+extension UIColor{
+    convenience init(whites: CGFloat, alpha: CGFloat) {
+        
+        
+        
+        
+        self.init(white: whites, alpha: alpha)
+        
+    }
+}
+
 class ViewController: UIViewController {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -22,7 +33,7 @@ class ViewController: UIViewController {
         //RunLoop.current.add(timer, forMode: .common)
         
         //request()
-        DnpTool.shareInstance.close()
+        self.view.backgroundColor = UIColor(whites: 0.8, alpha: 1)
     }
 
     

@@ -10,7 +10,7 @@ import UIKit
 import Foundation
 
 extension UIView: SelfAware{
-    public static func awake() {
+    internal static func awake() {
         swizzleMethod
     }
     private static let swizzleMethod: Void = {
