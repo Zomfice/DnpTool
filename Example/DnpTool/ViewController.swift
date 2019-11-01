@@ -97,39 +97,7 @@ class ViewController: UIViewController {
 
 
 extension ViewController {
-    func charcalcult() {
-        let string = "abca"//bcbb"//pwwkew
-        let charArr:[Character] = Array(string)
-        
-        
-        for c in charArr[0...0]{
-            print("---------")
-        }
-        
-        var count = 0
-        first: for (i,value) in charArr.enumerated() {
-            var num = 0
-            if i < charArr.count - 1,value != charArr[i+1]{
-                for c in charArr[0...i]{
-                    print("++++\(charArr[0...i])")
-                    if c == charArr[i+1]{
-                        continue first
-                    }else{
-                        num = num + 1
-                    }
-                }
-            }else{
-                continue first
-            }
-            
-            if num >= count {
-                count = num
-            }
-        }
-        print("----\(count)")
-    }
-    
-    
+
     func metrics() {
         MetricsConfig.shared.setEnable(false)
         

@@ -8,6 +8,8 @@
 import Foundation
 import UIKit
 
+internal let mmmm: CGFloat = 0.01//注释
+
 internal let screenwidth = UIScreen.main.bounds.width
 internal let screenheight = UIScreen.main.bounds.height
 
