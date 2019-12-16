@@ -16,10 +16,7 @@ import ZLNetworkComponent
 
 extension UIColor{
     convenience init(whites: CGFloat, alpha: CGFloat) {
-        
-        
-        
-        
+
         self.init(white: whites, alpha: alpha)
         
     }
