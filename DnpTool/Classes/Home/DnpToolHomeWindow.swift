@@ -15,7 +15,11 @@ class DnpToolHomeWindow: UIWindow {
     public static let shareInstance = DnpToolHomeWindow(frame: CGRect(x: 0, y: 0, width: screenwidth, height: screenheight))
 
     override init(frame: CGRect) {
-        super.init(frame: frame)
+        if #available(iOS 13, *),let scene = UIApplication.shared.keyWindow?.windowScene {
+            super.init(windowScene: scene)
+        } else {
+            super.init(frame: frame)
+        }
         self.windowLevel = UIWindow.Level.statusBar + 50.0
         self.backgroundColor = UIColor.clear
         self.isHidden = true

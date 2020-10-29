@@ -16,7 +16,11 @@ class DnpToolEnterView: UIWindow {
     init() {
         kEntryViewSize = screenScale(x: 80)//116
         let rect = CGRect(x: 0, y: screenheight * 0.8 , width: kEntryViewSize, height: kEntryViewSize)
-        super.init(frame: rect)
+        if #available(iOS 13, *),let scene = UIApplication.shared.keyWindow?.windowScene {
+            super.init(windowScene: scene)
+        } else {
+            super.init(frame: rect)
+        }
         self.backgroundColor = UIColor.clear
         
         self.windowLevel = UIWindow.Level.statusBar + 100.0
