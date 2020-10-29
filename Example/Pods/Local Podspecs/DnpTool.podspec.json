@@ -1,6 +1,6 @@
 {
   "name": "DnpTool",
-  "version": "1.2.5",
+  "version": "1.3.7",
   "summary": "A Debug Tool for develop in swift.",
   "description": "TODO: Add long description of the pod here.",
   "homepage": "https://github.com/Zomfice/DnpTool",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/Zomfice/DnpTool.git",
-    "tag": "1.2.5"
+    "tag": "1.3.7"
   },
   "platforms": {
     "ios": "8.0"

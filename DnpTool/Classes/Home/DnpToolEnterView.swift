@@ -18,6 +18,7 @@ class DnpToolEnterView: UIWindow {
         let rect = CGRect(x: 0, y: screenheight * 0.8 , width: kEntryViewSize, height: kEntryViewSize)
         if #available(iOS 13, *),let scene = UIApplication.shared.keyWindow?.windowScene {
             super.init(windowScene: scene)
+            self.frame = rect
         } else {
             super.init(frame: rect)
         }
