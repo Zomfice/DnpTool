@@ -36,11 +36,20 @@ class DnpCheckView: UIView {
         //screenheight - screenScale(x: 210) - screenScale(x: 15) - bottomSafeArea
         viewInfoWindow = DnpVisualWindow(frame: CGRect(x: screenScale(x: 30), y: statusbarHeight, width: screenwidth - 2*screenScale(x: 30), height: screenScale(x: 210)))
         
-        viewInfoWindow.makeKeyAndVisible()
+        //viewInfoWindow.makeKeyAndVisible()
         viewInfoWindow.isHidden = true
         viewInfoWindow.backgroundColor = UIColor.white.withAlphaComponent(0.8)
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+        /*DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
             self.window?.makeKeyAndVisible()
+        }*/
+        
+        if #available(iOS 13, *),let scene = UIApplication.shared.keyWindow?.windowScene {
+            viewInfoWindow.windowScene = scene
+        }else{
+            viewInfoWindow.makeKeyAndVisible()
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+                self.window?.makeKeyAndVisible()
+            }
         }
         
         viewInfoLabel = UILabel(frame: CGRect(x: screenScale(x: 10), y: screenScale(x: 10), width: viewInfoWindow.bounds.size.width - 2*screenScale(x: 10) , height: viewInfoWindow.bounds.size.height - 2*screenScale(x: 10)))

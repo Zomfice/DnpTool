@@ -35,9 +35,11 @@ internal var iphoneX: Bool{
         return false
     }
     if #available(iOS 11, *) {
-        let mainWindow = UIApplication.shared.delegate?.window
-        if let window = mainWindow,let bottom = window?.safeAreaInsets.bottom, bottom > CGFloat(0.0){
-            iphonex = true
+        let mainWindow = DnpToolCommon.getKeyWindow()
+        if let window = mainWindow{
+            if window.safeAreaInsets.bottom > CGFloat(0.0) {
+                iphonex = true
+            }
         }
     }
     return iphonex
@@ -53,8 +55,22 @@ extension UIColor{
     }
 }
 
-class DnpToolCommon {
-    
+class DnpToolCommon: NSObject {
+    internal static func getKeyWindow() -> UIWindow? {
+        var keyWindow : UIWindow? = nil
+        if let delegateWindow = UIApplication.shared.delegate?.window , delegateWindow != nil {
+            keyWindow = delegateWindow
+        }else{
+            let windows = UIApplication.shared.windows
+            for window in windows {
+                if !window.isHidden {
+                    keyWindow = window
+                    break
+                }
+            }
+        }
+        return keyWindow
+    }
 }
 
 

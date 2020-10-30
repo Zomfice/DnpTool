@@ -25,9 +25,12 @@ public class DnpRulerManager: NSObject {
         if self.rulerView == nil {
             self.rulerView = DnpRulerView()
             self.rulerView?.hide()
-            let delegateWindow = UIApplication.shared.delegate?.window
+            /*let delegateWindow = UIApplication.shared.delegate?.window
             if let window = delegateWindow,let m_rulerView = self.rulerView {
                 window?.addSubview(m_rulerView)
+            }*/
+            if let m_rulerView = self.rulerView {
+                DnpToolCommon.getKeyWindow()?.addSubview(m_rulerView)
             }
         }
         self.rulerView?.show()

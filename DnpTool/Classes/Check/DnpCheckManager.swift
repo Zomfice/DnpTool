@@ -24,9 +24,12 @@ public class DnpCheckManager: NSObject {
         if self.checkView == nil {
             self.checkView = DnpCheckView()
             self.checkView?.isHidden = true
-            let delegateWindow = UIApplication.shared.delegate?.window
+            /*let delegateWindow = UIApplication.shared.delegate?.window
             if let window = delegateWindow,let m_checkView = self.checkView {
                 window?.addSubview(m_checkView)
+            }*/
+            if let m_checkView = self.checkView {
+                DnpToolCommon.getKeyWindow()?.addSubview(m_checkView)
             }
         }
         self.checkView?.show()

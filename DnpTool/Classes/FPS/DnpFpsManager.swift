@@ -24,9 +24,12 @@ public class DnpFpsManager: NSObject {
         if self.fpsView == nil {
             self.fpsView = DnpFpsView()
             self.fpsView?.hide()
-            let delegateWindow = UIApplication.shared.delegate?.window
+            /*let delegateWindow = UIApplication.shared.delegate?.window
             if let window = delegateWindow,let m_rulerView = self.fpsView {
                 window?.addSubview(m_rulerView)
+            }*/
+            if let m_rulerView = self.fpsView {
+                DnpToolCommon.getKeyWindow()?.addSubview(m_rulerView)
             }
         }
         self.fpsView?.show()
